@@ -44,7 +44,7 @@ function BridgeMarkerList() {
     return (
         <ul>
             {bridges.map(bridge =>
-                <li key="{bridge.position}">
+                <li key={bridge.position}>
                     <BridgeMarker
                         position={bridge.position} overlayComponent={bridge.overlayComponent}
                     />

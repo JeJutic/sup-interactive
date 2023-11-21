@@ -1,3 +1,4 @@
+import "./DefaultQuestion.css"
 import React from "react";
 
 function AnswerButton() {
@@ -10,7 +11,7 @@ function AnswerButton() {
 
 function DefaultQuestion({ question }) {
     return (
-        <div className="question whitebox">
+        <div className="white-box">
             <h1>{question}</h1>
             <AnswerButton />
             <AnswerButton />

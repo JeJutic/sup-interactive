@@ -1,3 +1,4 @@
+import "./QuestionModal.css"
 import React, {Fragment} from "react";
 import Modal from "react-overlays/Modal";
 
@@ -19,9 +20,11 @@ function QuestionModal({ overlayComponent, showModal, setShowModal }) {
             onHide={handleClose}
         >
             <Fragment>
-                {overlayComponent}
+                <div className="question">
+                    {overlayComponent}
+                    <CloseButton setShowModal={setShowModal}/>
+                </div>
                 <div className="shadow"></div>
-                <CloseButton setShowModal={setShowModal}/>
             </Fragment>
         </Modal>
     )
