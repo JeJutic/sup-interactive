@@ -41,15 +41,6 @@ function BridgeMarker({ position, overlayComponent }) {
 }
 
 function BridgeMarkerList() {
-    // const rows = [];
-    //
-    // bridges.forEach((bridge) => {
-    //     rows.push(
-    //         <BridgeMarker
-    //             position={bridge.position} overlayComponent={bridge.overlayComponent}/>
-    //     );
-    // });
-
     return (
         <ul>
             {bridges.map(bridge =>

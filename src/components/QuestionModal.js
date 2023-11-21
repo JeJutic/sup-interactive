@@ -19,11 +19,9 @@ function QuestionModal({ overlayComponent, showModal, setShowModal }) {
             onHide={handleClose}
         >
             <Fragment>
-                {/*<div className="outer">*/}
                 {overlayComponent}
                 <div className="shadow"></div>
                 <CloseButton setShowModal={setShowModal}/>
-                {/*</div>*/}
             </Fragment>
         </Modal>
     )
