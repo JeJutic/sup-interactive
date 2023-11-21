@@ -1,5 +1,5 @@
 import React from "react";
-import DefaultQuestion from "./components/DefaultQuestion";
+import DefaultQuestion from "./questions/DefaultQuestion";
 
 export const bridges = [
   {

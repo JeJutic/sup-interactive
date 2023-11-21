@@ -2,7 +2,7 @@ import './App.css';
 import {MapContainer, TileLayer, useMap} from "react-leaflet";
 import L from "leaflet";
 import React from "react";
-import BridgeMarkerList from "./components/BridgeMarker";
+import BridgeMarkerList from "./commons/BridgeMarker";
 
 const center = [59.928, 30.314]
 const defaultZoom = 14
