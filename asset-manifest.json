@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sup-interactive/static/css/main.82c4608e.css",
+    "main.js": "/sup-interactive/static/js/main.1f0c0019.js",
+    "index.html": "/sup-interactive/index.html",
+    "main.82c4608e.css.map": "/sup-interactive/static/css/main.82c4608e.css.map",
+    "main.1f0c0019.js.map": "/sup-interactive/static/js/main.1f0c0019.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82c4608e.css",
+    "static/js/main.1f0c0019.js"
+  ]
+}
