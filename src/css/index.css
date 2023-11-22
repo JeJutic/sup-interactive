@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* CONFIG */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: whitesmoke;
+  --fs-small: 1rem;
+  --fs-normal: 1.5rem;
+  --fs-big: 2rem;
+  --fc-light: whitesmoke;
+  --color-dark-btn: #343a40;
+}
+
+/* MAIN */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--fs-small);
+}
+
+/* UTILITY */
+
+/* CLASSES */

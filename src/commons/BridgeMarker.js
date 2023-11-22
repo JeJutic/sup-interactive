@@ -1,7 +1,7 @@
 import L from "leaflet";
 import React, {Fragment, useState} from "react";
 import {Marker} from "react-leaflet";
-import {bridges} from "../bridges";
+import {bridges} from "../js/bridges";
 import QuestionModal from "./QuestionModal";
 
 function BridgeMarker({ position, overlayComponent }) {
