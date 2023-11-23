@@ -1,9 +1,9 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 import 'leaflet/dist/leaflet.css'
-import './index.css';
+import './css/index.css';
 // import L from "leaflet";
-import App from './App';
+import App from './js/App';
 
 // import icon from 'leaflet/dist/images/marker-icon.png';
 // import iconShadow from 'leaflet/dist/images/marker-shadow.png';
