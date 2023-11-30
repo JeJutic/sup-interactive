@@ -3,11 +3,20 @@
     height: 100vh;
 }
 
+.question-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2000;
+    perspective: 1000px;
+}
+
 .question {
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 2000;
+    transform-style: preserve-3d;
 }
 
 .close-button {
@@ -34,6 +43,16 @@
 .close-button:active {
     font-size: 2.75rem;
 }
+
+.fade > .question-wrapper {
+    top: 100%;
+    transition: transform 300ms ease;
+}
+
+.fade-show > .question-wrapper {
+    transform: translateY(-100%);
+}
+
 
 .shadow {
     position: absolute;

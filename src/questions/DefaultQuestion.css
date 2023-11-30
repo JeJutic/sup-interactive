@@ -1,11 +1,26 @@
-.card,
-.card-reverse {
+.card {
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+}
+
+.card-front,
+.card-back {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 100%;
-    position: relative;
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
 }
 
 .hidden {
