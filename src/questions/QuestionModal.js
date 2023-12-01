@@ -32,7 +32,10 @@ const Fade = ({ children, ...props }) => (
 function QuestionModal({ overlayComponent, showModal, setShowModal }) {
   const [showFront, setShowFront] = useState(true);
 
-  const closeModal = () => setShowModal(false);
+  const closeModal = () => {
+    setShowModal(false);
+    setTimeout(() => setShowFront(true), 300);
+  }
 
   const btn = <CloseButton onClick={closeModal} />;
 
