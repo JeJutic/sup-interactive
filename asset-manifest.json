@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sup-interactive/static/css/main.d1679331.css",
-    "main.js": "/sup-interactive/static/js/main.25cec941.js",
+    "main.js": "/sup-interactive/static/js/main.84be25cd.js",
     "static/media/test-bridge.jpg": "/sup-interactive/static/media/test-bridge.13695f0a784e351cd125.jpg",
     "index.html": "/sup-interactive/index.html",
     "main.d1679331.css.map": "/sup-interactive/static/css/main.d1679331.css.map",
-    "main.25cec941.js.map": "/sup-interactive/static/js/main.25cec941.js.map"
+    "main.84be25cd.js.map": "/sup-interactive/static/js/main.84be25cd.js.map"
   },
   "entrypoints": [
     "static/css/main.d1679331.css",
-    "static/js/main.25cec941.js"
+    "static/js/main.84be25cd.js"
   ]
 }
