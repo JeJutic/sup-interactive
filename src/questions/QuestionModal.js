@@ -2,7 +2,7 @@ import "./QuestionModal.css";
 import React, { Fragment, useState } from "react";
 import Modal from "react-overlays/Modal";
 
-import { Transition, CSSTransition } from 'react-transition-group';
+import { Transition, CSSTransition } from "react-transition-group";
 
 function CloseButton({ onClick }) {
   return (
@@ -13,8 +13,8 @@ function CloseButton({ onClick }) {
 }
 
 const fadeStyles = {
-  entered: 'show',
-  entering: 'show'
+  entered: "show",
+  entering: "show",
 };
 
 const Fade = ({ children, ...props }) => (
@@ -28,7 +28,6 @@ const Fade = ({ children, ...props }) => (
   </Transition>
 );
 
-
 function QuestionModal({ overlayComponent, showModal, setShowModal }) {
   const [showFront, setShowFront] = useState(true);
 
@@ -37,24 +36,25 @@ function QuestionModal({ overlayComponent, showModal, setShowModal }) {
   const btn = <CloseButton onClick={closeModal} />;
 
   return (
-    <Modal className="modal" show={showModal} onHide={closeModal} transition={Fade}>
+    <Modal
+      className="modal"
+      show={showModal}
+      onHide={closeModal}
+      transition={Fade}
+    >
       <Fragment>
-          <div className="question-wrapper">
-            <CSSTransition
-              in={showFront}
-              timeout={300}
-              classNames='flip'
-            >
-              <div className="question">
-                {React.cloneElement(overlayComponent, {
-                  onClick: () => {
-                    setShowFront((v) => !v);
-                  },
-                  closeButton: btn
-                })}
-              </div>
-            </CSSTransition>
-          </div>
+        <div className="question-wrapper">
+          <CSSTransition in={showFront} timeout={300} classNames="flip">
+            <div className="question">
+              {React.cloneElement(overlayComponent, {
+                onClick: () => {
+                  setShowFront((v) => !v);
+                },
+                closeButton: btn,
+              })}
+            </div>
+          </CSSTransition>
+        </div>
         <div className="shadow"></div>
       </Fragment>
     </Modal>

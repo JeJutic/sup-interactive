@@ -1,6 +1,6 @@
-import './DefaultQuestionTransition.css';
+import "./DefaultQuestionTransition.css";
 import "./DefaultQuestion.css";
-import React, { useState } from "react";
+import React from "react";
 
 function AnswerButton() {
   return <button>I'm answer</button>;
@@ -13,7 +13,7 @@ function DefaultQuestion({
   description,
   questionDescription,
   onClick,
-  closeButton
+  closeButton,
 }) {
   return (
     <div className="card">
