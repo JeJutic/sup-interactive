@@ -28,7 +28,12 @@ const Fade = ({ children, ...props }) => (
   </Transition>
 );
 
-function QuestionModal({ overlayComponent, showModal, setShowModal }) {
+function QuestionModal({
+  overlayComponent,
+  showModal,
+  setShowModal,
+  onQuestionSolved,
+}) {
   const [showFront, setShowFront] = useState(true);
 
   const closeModal = () => setShowModal(false);
@@ -46,7 +51,7 @@ function QuestionModal({ overlayComponent, showModal, setShowModal }) {
         <div className="question-wrapper">
           <CSSTransition in={showFront} timeout={300} classNames="flip">
             <div className="question">
-              {React.cloneElement(overlayComponent, {
+              {React.cloneElement(overlayComponent(onQuestionSolved), {
                 onClick: () => {
                   setShowFront((v) => !v);
                 },
