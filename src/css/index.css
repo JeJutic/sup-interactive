@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
 
 /* CONFIG */
 
@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary-color: whitesmoke;
+  --primary-color: #060F5C;
   --fs-small: 1rem;
   --fs-normal: 1.5rem;
   --fs-big: 2rem;
@@ -17,6 +17,8 @@
   --color-dark-btn: #343a40;
   --color-exit-btn: #636569;
   --color-exit-press-btn: #38383b;
+  --accent-color: #E64614;
+  --secondary-color: #F3C658;
 }
 
 /* MAIN */
@@ -40,6 +42,14 @@ body {
   .close-button {
     right: 19% !important;
   }
+
+  .bottom__img__wrapper {
+    height: 30% !important;
+  }
+
+  .card-description {
+    padding: 0 3rem !important;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -48,6 +58,37 @@ body {
   }
 
   .close-button {
-    right: 31% !important;
+    right: 32% !important;
+  }
+
+  .card__description {
+    padding: 0 3rem !important;
+  }
+
+  .card__description::-webkit-scrollbar, .question__description::-webkit-scrollbar {
+    opacity: 0 !important;
+    width: 0 !important;
+  }
+
+  .card__header {
+    padding: 3rem 1rem 2rem !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    font-size: var(--fs-normal);
+  }
+
+  .answer__button {
+    font-size: var(--fs-normal);
+  }
+
+  .question__description {
+    margin-top: 4rem !important;
+  }
+
+  .question__answers {
+    height: 30% !important;
   }
 }

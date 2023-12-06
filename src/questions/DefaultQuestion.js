@@ -2,13 +2,25 @@ import "./DefaultQuestionTransition.css";
 import "./DefaultQuestion.css";
 import React from "react";
 
-function AnswerButton({ onQuestionSolved }) {
+import bottomImg from "../img/bottomImg.svg";
+import caretRight from "../img/caret-right.svg";
+import caretLeft from "../img/caret-left-fill.svg";
+
+function AnswerButton({ onQuestionSolved, text }) {
   const onClick = () => {
     if (onQuestionSolved) {
       onQuestionSolved();
     }
   };
-  return <button onClick={onClick}>I'm answer</button>;
+  return (
+    <>
+      <button className="answer__button" onClick={onClick}>
+        {text}
+        <img className="caret" src={caretRight} alt="..." />
+        <img className="caret-left" src={caretLeft} alt="..." />
+      </button>
+    </>
+  );
 }
 
 function DefaultQuestion({
@@ -30,16 +42,30 @@ function DefaultQuestion({
           </div>
           <h1 className="card__header">{header}</h1>
           <p className="card__description">{description}</p>
+          <div className="bottom__img__wrapper">
+            <img className="bottom__img" src={bottomImg} alt="..." />
+          </div>
         </div>
         {closeButton}
       </div>
       <div className="card-back">
         <div className="white-box" onClick={onClick}>
-          <h1>{question}</h1>
-          <p>{questionDescription}</p>
-          <AnswerButton onQuestionSolved={onQuestionSolved} />
-          <AnswerButton onQuestionSolved={onQuestionSolved} />
-          <AnswerButton />
+          <h1 className="question__header">{question}</h1>
+          <p className="question__description">{questionDescription}</p>
+          <div className="question__answers">
+            <AnswerButton
+              text="76.000 рублей"
+              onQuestionSolved={onQuestionSolved}
+            />
+            <AnswerButton
+              text="56.000 рублей"
+              onQuestionSolved={onQuestionSolved}
+            />
+            <AnswerButton text="36.000 рублей" />
+          </div>
+          <div className="bottom__img__wrapper">
+            <img className="bottom__img" src={bottomImg} alt="..." />
+          </div>
         </div>
         {closeButton}
       </div>
