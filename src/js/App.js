@@ -1,18 +1,32 @@
 import "../css/App.css";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import L from "leaflet";
-import React from "react";
+import React, { useState } from "react";
 import BridgeMarkerList from "../commons/BridgeMarker";
-import { WelcomeScreen } from "../commons/WelcomeScreen";
+import WelcomeScreen from "../commons/WelcomeScreen";
+import FinishScreen from "../commons/FinishScreen";
+import { bridges } from "./bridges";
 
 const center = [59.928, 30.314];
 const defaultZoom = 14;
 const minZoom = 13;
 
 function App() {
+  const [showFinishScreen, setShowFinishScreen] = useState(false);
+
+  const onQuestionSolved = () => {
+    if (countFinishedBridges() === bridges.length) {
+      setShowFinishScreen(true);
+      bridges.forEach((b) => {
+        unsetBridgeFinished(b);
+      });
+    }
+  };
+
   return (
     <>
       <WelcomeScreen />
+      {showFinishScreen && <FinishScreen />}
       <MapContainer
         className="map"
         style={{ height: "100vh", width: "100%" }}
@@ -26,10 +40,22 @@ function App() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <BridgeMarkerList />
+        <BridgeMarkerList upperOnQuestionSolved={onQuestionSolved} />
       </MapContainer>
     </>
   );
+}
+
+function isBridgeFinished(bridge) {
+  return localStorage.getItem("bridge" + bridge.position);
+}
+
+function unsetBridgeFinished(bridge) {
+  return localStorage.removeItem("bridge" + bridge.position);
+}
+
+function countFinishedBridges() {
+  return bridges.filter(isBridgeFinished).length;
 }
 
 function MapSettings() {

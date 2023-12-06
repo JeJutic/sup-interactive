@@ -2,8 +2,13 @@ import "./DefaultQuestionTransition.css";
 import "./DefaultQuestion.css";
 import React from "react";
 
-function AnswerButton() {
-  return <button>I'm answer</button>;
+function AnswerButton({ onQuestionSolved }) {
+  const onClick = () => {
+    if (onQuestionSolved) {
+      onQuestionSolved();
+    }
+  };
+  return <button onClick={onClick}>I'm answer</button>;
 }
 
 function DefaultQuestion({
@@ -14,6 +19,7 @@ function DefaultQuestion({
   questionDescription,
   onClick,
   closeButton,
+  onQuestionSolved,
 }) {
   return (
     <div className="card">
@@ -31,8 +37,8 @@ function DefaultQuestion({
         <div className="white-box" onClick={onClick}>
           <h1>{question}</h1>
           <p>{questionDescription}</p>
-          <AnswerButton />
-          <AnswerButton />
+          <AnswerButton onQuestionSolved={onQuestionSolved} />
+          <AnswerButton onQuestionSolved={onQuestionSolved} />
           <AnswerButton />
         </div>
         {closeButton}

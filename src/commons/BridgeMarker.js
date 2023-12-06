@@ -4,7 +4,7 @@ import { Marker } from "react-leaflet";
 import { bridges } from "../js/bridges";
 import QuestionModal from "../questions/QuestionModal";
 
-function BridgeMarker({ position, overlayComponent }) {
+function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
   const LeafIcon = L.Icon.extend({
     options: {},
   });
@@ -18,13 +18,22 @@ function BridgeMarker({ position, overlayComponent }) {
         "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|2ecc71&chf=a,s,ee00FFFF",
     });
 
-  const [icon, setIcon] = useState(blueIcon);
+  let icon = localStorage.getItem("bridge" + position) ? greenIcon : blueIcon;
 
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => {
-    setIcon(greenIcon);
+    if (localStorage.getItem("bridge" + position)) {
+      return;
+    }
     setShowModal(true);
+  };
+
+  const onQuestionSolved = () => {
+    localStorage.setItem("bridge" + position, "true");
+    icon = greenIcon;
+    setShowModal(false);
+    upperOnQuestionSolved();
   };
 
   return (
@@ -39,12 +48,13 @@ function BridgeMarker({ position, overlayComponent }) {
         overlayComponent={overlayComponent}
         showModal={showModal}
         setShowModal={setShowModal}
+        onQuestionSolved={onQuestionSolved}
       />
     </Fragment>
   );
 }
 
-function BridgeMarkerList() {
+function BridgeMarkerList({ upperOnQuestionSolved }) {
   return (
     <ul>
       {bridges.map((bridge) => (
@@ -52,6 +62,7 @@ function BridgeMarkerList() {
           <BridgeMarker
             position={bridge.position}
             overlayComponent={bridge.overlayComponent}
+            upperOnQuestionSolved={upperOnQuestionSolved}
           />
         </li>
       ))}
