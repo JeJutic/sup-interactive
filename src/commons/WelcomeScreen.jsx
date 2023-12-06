@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./WelcomeScreen.css";
 
-import mainPage from "../img/main_page.png";
-
 export const WelcomeScreen = () => {
   const [isVisible, setIsVisible] = useState(true);
 
