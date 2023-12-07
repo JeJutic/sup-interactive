@@ -120,6 +120,10 @@
     padding-bottom: 0.75rem;
 }
 
+.answer__button:active {
+    transform: scale(0.95);
+}
+
 .answer__button:hover {
     background-color: var(--accent-color);
 }

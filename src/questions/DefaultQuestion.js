@@ -31,6 +31,7 @@ function DefaultQuestion({
   questionDescription,
   onClick,
   closeButton,
+  answerOptions,
   onQuestionSolved,
 }) {
   return (
@@ -54,14 +55,14 @@ function DefaultQuestion({
           <p className="question__description">{questionDescription}</p>
           <div className="question__answers">
             <AnswerButton
-              text="76.000 рублей"
+              text={answerOptions[0][0]}
               onQuestionSolved={onQuestionSolved}
             />
             <AnswerButton
-              text="56.000 рублей"
+              text={answerOptions[1][0]}
               onQuestionSolved={onQuestionSolved}
             />
-            <AnswerButton text="36.000 рублей" />
+            <AnswerButton text={answerOptions[2][0]} />
           </div>
           <div className="bottom__img__wrapper">
             <img className="bottom__img" src={bottomImg} alt="..." />
