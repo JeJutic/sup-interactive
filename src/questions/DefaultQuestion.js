@@ -6,12 +6,7 @@ import bottomImg from "../img/bottomImg.svg";
 import caretRight from "../img/caret-right.svg";
 import caretLeft from "../img/caret-left-fill.svg";
 
-function AnswerButton({ onQuestionSolved, text }) {
-  const onClick = () => {
-    if (onQuestionSolved) {
-      onQuestionSolved();
-    }
-  };
+function AnswerButton({ text, onClick }) {
   return (
     <>
       <button className="answer__button" onClick={onClick}>
@@ -23,15 +18,30 @@ function AnswerButton({ onQuestionSolved, text }) {
   );
 }
 
+function AnswerButtonList({ options, onQuestionSolved }) {
+  return (
+    <ul>
+      {options.map((option) => (
+        <li key={option.text}>
+          <AnswerButton
+            text={option.text}
+            onClick={option.correct ? onQuestionSolved : () => {}}
+          />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function DefaultQuestion({
   question,
   image,
   header,
   description,
   questionDescription,
+  options,
   onClick,
   closeButton,
-  answerOptions,
   onQuestionSolved,
 }) {
   return (
@@ -54,15 +64,10 @@ function DefaultQuestion({
           <h1 className="question__header">{question}</h1>
           <p className="question__description">{questionDescription}</p>
           <div className="question__answers">
-            <AnswerButton
-              text={answerOptions[0][0]}
+            <AnswerButtonList
+              options={options}
               onQuestionSolved={onQuestionSolved}
             />
-            <AnswerButton
-              text={answerOptions[1][0]}
-              onQuestionSolved={onQuestionSolved}
-            />
-            <AnswerButton text={answerOptions[2][0]} />
           </div>
           <div className="bottom__img__wrapper">
             <img className="bottom__img" src={bottomImg} alt="..." />

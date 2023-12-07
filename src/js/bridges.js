@@ -13,6 +13,11 @@ export const bridges = [
         image={testBridge}
         header="Card Name"
         description="lorem ipsum чето то там и так идет описание карточки наверное это можно было сделать через children элемента чтобы было удобнее но мне пока лень это делать"
+        options={[
+          { text: "wrong answer", correct: false },
+          { text: "right answer", correct: true },
+          { text: "left answer", correct: false },
+        ]}
         onQuestionSolved={onQuestionSolved}
       />
     ),
@@ -27,11 +32,10 @@ export const bridges = [
         description="Каменный мост сохранился практически в первозданном виде и входит в список памятников архитектуры федерального значения. Современный каменный мост был возведён в 1766—1776 гг. по проекту инженера В. Назимова и под наблюдением инженера И. Борисова"
         questionDescription="Рассчитать стоимость строительства моста на современные деньги, то есть перевести 3500 рублей 1890-ых годов современные деньги
          (подсказка: 1 рубль = 104 поездкам в метро Санкт- Петербурга по карте подорожник)"
-        answerOptions={[
-          ["76.000 ₽", 0],
-          ["56.000 ₽", 1],
-          ["36.000 ₽", 0],
-          ["96.000 ₽", 0],
+        options={[
+          { text: "76.000 рублей", correct: true },
+          { text: "56.000 рублей", correct: false },
+          { text: "36.000 рублей", correct: false },
         ]}
         onQuestionSolved={onQuestionSolved}
       />
