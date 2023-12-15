@@ -20,7 +20,7 @@ function AnswerButton({ text, onClick }) {
 
 function AnswerButtonList({ options, onQuestionSolved }) {
   return (
-    <ul>
+    <ul className="question__answers__ul">
       {options.map((option) => (
         <li key={option.text}>
           <AnswerButton
