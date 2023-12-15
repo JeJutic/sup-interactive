@@ -5,25 +5,25 @@ import testBridge from "../img/test-bridge.jpg";
 import stoneBridge from "../img/stone_bridge.png";
 
 export const bridges = [
-  // {
-  //   position: [59.930356, 30.318468],
-  //   overlayComponent: (onQuestionSolved) => (
-  //     <DefaultQuestion
-  //       question={"Вопрос?"}
-  //       image={testBridge}
-  //       header="Card Name"
-  //       description="lorem ipsum чето то там и так идет описание карточки наверное это можно было сделать через children элемента чтобы было удобнее но мне пока лень это делать"
-  //       options={[
-  //         { text: "wrong answer", correct: false },
-  //         { text: "right answer", correct: true },
-  //         { text: "left answer", correct: false },
-  //       ]}
-  //       onQuestionSolved={onQuestionSolved}
-  //     />
-  //   ),
-  // },
   {
-    position: [59.930409, 30.318473],
+    position: [59.933, 30.314627],
+    overlayComponent: (onQuestionSolved) => (
+      <DefaultQuestion
+        question={"Вопрос?"}
+        image={testBridge}
+        header="Card Name"
+        description="lorem ipsum чето то там и так идет описание карточки наверное это можно было сделать через children элемента чтобы было удобнее но мне пока лень это делать"
+        options={[
+          { text: "wrong answer", correct: false },
+          { text: "right answer", correct: true },
+          { text: "left answer", correct: false },
+        ]}
+        onQuestionSolved={onQuestionSolved}
+      />
+    ),
+  },
+  {
+    position: [59.930334, 30.318489],
     overlayComponent: (onQuestionSolved) => (
       <DefaultQuestion
         question={"Вопрос 1"}

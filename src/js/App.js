@@ -148,12 +148,10 @@ var ZoomShowHide = L.FeatureGroup.extend({
         var that = this; // I do not like this programing language.
         this.map = map
         this.map.on('zoom', function(e) {that.filter()});
-        this.map.on('zoomstart', (e) => {console.log('zoom start', e.target)});
     },
 
     filter: function () {
         var current_zoom_level = this.map.getZoom();
-        console.log(current_zoom_level, this)
         for (var i=0; i < this.layers.length; i++) {
             var layer = this.layers[i];
             if ((layer.min_zoom == null || current_zoom_level >= layer.min_zoom) &&
@@ -282,10 +280,6 @@ function App() {
         maxBoundsViscosity={1.0}
       >
         <MapSettings />
-        <Marker
-          icon={new L.Icon({iconUrl: "https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon.png", iconSize: [25, 41], iconAnchor: [25 / 2, 41]})}
-          position={[59.933277, 30.314214]} />
-        {/*<CircleMarker center={[59.933277, 30.314214]} radius={16} />*/}
         <ImageOverlay bounds={bounds} url={myMap}>
         </ImageOverlay>
         <BridgeMarkerList upperOnQuestionSolved={onQuestionSolved} />

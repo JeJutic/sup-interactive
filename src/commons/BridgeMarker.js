@@ -3,19 +3,22 @@ import React, { Fragment, useState } from "react";
 import { Marker } from "react-leaflet";
 import { bridges } from "../js/bridges";
 import QuestionModal from "../questions/QuestionModal";
+import markerGreyIcon from "../img/grey-marker.png";
+import markerRedIcon from "../img/red-marker.png";
 
 function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
   const LeafIcon = L.Icon.extend({
-    options: {},
+    options: {
+      iconSize: [33, 47],
+      iconAnchor: [33 / 2, 47]
+    },
   });
 
   const blueIcon = new LeafIcon({
-      iconUrl:
-        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF",
+    iconUrl: markerGreyIcon,
     }),
     greenIcon = new LeafIcon({
-      iconUrl:
-        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|2ecc71&chf=a,s,ee00FFFF",
+      iconUrl: markerRedIcon
     });
 
   let icon = localStorage.getItem("bridge" + position) ? greenIcon : blueIcon;
@@ -43,8 +46,6 @@ function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
         position={position}
         eventHandlers={{ click: handleClick }}
         icon={icon}
-        iconSize={[21, 34]}
-        iconAnchor={[10, 34]}
       ></Marker>
       <QuestionModal
         overlayComponent={overlayComponent}
