@@ -1,3 +1,18 @@
 .map {
   position: fixed;
 }
+
+.leaflet-small-label {
+  width: max-content;
+}
+
+.leaflet-small-label-inner {
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+}
+
+.leaflet-zoom-anim
+.leaflet-zoom-animated {
+  transition-timing-function: ease-out;
+  transition-duration: 150ms;
+}

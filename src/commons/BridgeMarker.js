@@ -43,6 +43,8 @@ function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
         position={position}
         eventHandlers={{ click: handleClick }}
         icon={icon}
+        iconSize={[21, 34]}
+        iconAnchor={[10, 34]}
       ></Marker>
       <QuestionModal
         overlayComponent={overlayComponent}
