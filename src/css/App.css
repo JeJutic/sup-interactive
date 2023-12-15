@@ -11,6 +11,19 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.leaflet-big-label {
+  width: max-content;
+}
+
+.leaflet-big-label-inner {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14pt;
+  transform: translate(-50%, -50%);
+  color: #878787;
+  font-weight: 700;
+}
 /*
 .leaflet-zoom-anim
 .leaflet-zoom-animated {
