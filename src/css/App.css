@@ -24,6 +24,16 @@
   color: #878787;
   font-weight: 700;
 }
+
+.leaflet-sight {
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 11pt;
+}
+
+.leaflet-sight > img {
+  width: 100% !important;
+}
 /*
 .leaflet-zoom-anim
 .leaflet-zoom-animated {

@@ -8,6 +8,12 @@ import WelcomeScreen from "../commons/WelcomeScreen";
 import FinishScreen from "../commons/FinishScreen";
 import { bridges } from "./bridges";
 
+import kunstkameraIcon from "../img/Kunstkamera.png";
+import peterAndPaulFortressIcon from "../img/Peter-and-paul-fortress.png";
+import hermitageIcon from "../img/Hermitage.png";
+import saintIsaacsCathedralIcon from "../img/Saint-Isaacs-Cathedral.png";
+import saintMichaelsCastleIcon from "../img/Saint-Michaels-Castle.png";
+
 const center = [59.933, 30.314];
 // const bounds = [[59.904209, 30.176695], [59.965838, 30.455914]];
 const bounds = [[59.902412999999996, 30.17354], [59.964387, 30.45446]];
@@ -134,6 +140,14 @@ const bigLabels = [
     [59.960940, 30.343865, "Выборгский район"]
 ];
 
+const sights = [
+    [59.942718, 30.299306, kunstkameraIcon, "Кунтскамера"],
+    [59.950240, 30.313425, peterAndPaulFortressIcon, "Петропавловская крепость", 90],
+    [59.939282, 30.314927, hermitageIcon, "Государственный Эрмитаж", 90],
+    [59.935107, 30.305958, saintIsaacsCathedralIcon, "Исаакиевский собор", 80],
+    [59.938278, 30.336972, saintMichaelsCastleIcon, "Михайловский замок", 70]
+];
+
 const defaultZoom = 14;
 const minZoom = 14;
 
@@ -246,6 +260,20 @@ function App() {
                 html: content,
                 className: 'leaflet-big-label',
                 iconSize: null,
+            })
+        }).addTo(map);
+    }
+
+    for (const [lat, lon, icon, text, maxImgSize] of sights) {
+        let imgStyle = "";
+        if (maxImgSize !== undefined) {
+            imgStyle = `max-width: ${maxImgSize}px !important`;
+        }
+        L.marker([lat, lon], {
+            icon: L.divIcon({
+                html: `<img src=${icon} style="${imgStyle}"/><span>${text}</span>`,
+                className: 'leaflet-sight',
+                iconSize: [120, 120]
             })
         }).addTo(map);
     }
