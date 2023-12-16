@@ -36,6 +36,7 @@ export const bridges = [
           { text: "76.000 рублей", correct: true },
           { text: "56.000 рублей", correct: false },
           { text: "36.000 рублей", correct: false },
+          { text: "96.000 рублей", correct: false },
         ]}
         onQuestionSolved={onQuestionSolved}
       />
