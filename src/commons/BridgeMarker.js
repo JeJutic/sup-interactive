@@ -3,7 +3,7 @@ import React, { Fragment, useState } from "react";
 import { Marker } from "react-leaflet";
 import { bridges } from "../js/bridges";
 import QuestionModal from "../questions/QuestionModal";
-import markerGreyIcon from "../img/grey-marker.png";
+import markerYellowIcon from "../img/yellow-marker.png";
 import markerRedIcon from "../img/red-marker.png";
 
 function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
@@ -15,10 +15,10 @@ function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
   });
 
   const blueIcon = new LeafIcon({
-      iconUrl: markerGreyIcon,
+      iconUrl: markerRedIcon,
     }),
     greenIcon = new LeafIcon({
-      iconUrl: markerRedIcon,
+      iconUrl: markerYellowIcon,
     });
 
   let icon = localStorage.getItem("bridge" + position) ? greenIcon : blueIcon;
