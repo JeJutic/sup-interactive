@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary-color: #060F5C;
+  --primary-color: #060f5c;
   --fs-small: 1rem;
   --fs-normal: 1.25rem;
   --fs-large: 1.5rem;
@@ -18,8 +18,8 @@
   --color-dark-btn: #343a40;
   --color-exit-btn: #636569;
   --color-exit-press-btn: #38383b;
-  --accent-color: #E64614;
-  --secondary-color: #F3C658;
+  --accent-color: #e64614;
+  --secondary-color: #f3c658;
 }
 
 /* MAIN */
@@ -76,7 +76,8 @@ body {
     line-height: 2rem !important;
   }
 
-  .card__description::-webkit-scrollbar, .question__description::-webkit-scrollbar {
+  .card__description::-webkit-scrollbar,
+  .question__description::-webkit-scrollbar {
     opacity: 0 !important;
     width: 0 !important;
   }

@@ -6,7 +6,7 @@ import stoneBridge from "../img/stone_bridge.png";
 
 export const bridges = [
   {
-    position: [59.92518, 30.32687],
+    position: [59.933, 30.314627],
     overlayComponent: (onQuestionSolved) => (
       <DefaultQuestion
         question={"Вопрос?"}
@@ -23,7 +23,7 @@ export const bridges = [
     ),
   },
   {
-    position: [59.94215, 30.33812],
+    position: [59.930334, 30.318489],
     overlayComponent: (onQuestionSolved) => (
       <DefaultQuestion
         question={"Вопрос 1"}

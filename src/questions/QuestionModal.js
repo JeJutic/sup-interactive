@@ -39,7 +39,7 @@ function QuestionModal({
   const closeModal = () => {
     setShowModal(false);
     setTimeout(() => setShowFront(true), 300);
-  }
+  };
 
   const btn = <CloseButton onClick={closeModal} />;
 
