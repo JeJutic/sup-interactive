@@ -3,7 +3,7 @@ const bounds = [
   [59.964387, 30.45446],
 ];
 
-export default {
+const config = {
   mapContainer: {
     center: [50.933, 30.314],
     bounds: bounds,
@@ -20,3 +20,5 @@ export default {
   },
   smallLabelZoomThreshold: 14.5,
 };
+
+export default config;
