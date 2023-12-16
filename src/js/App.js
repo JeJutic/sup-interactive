@@ -12,7 +12,6 @@ import addSmallLabels from "./smallLabels";
 import addBigLabels from "./bigLabels";
 import addSights from "./sights";
 
-
 function App() {
   const [showFinishScreen, setShowFinishScreen] = useState(false);
 

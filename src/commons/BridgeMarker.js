@@ -10,15 +10,15 @@ function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
   const LeafIcon = L.Icon.extend({
     options: {
       iconSize: [33, 47],
-      iconAnchor: [33 / 2, 47]
+      iconAnchor: [33 / 2, 47],
     },
   });
 
   const blueIcon = new LeafIcon({
-    iconUrl: markerGreyIcon,
+      iconUrl: markerGreyIcon,
     }),
     greenIcon = new LeafIcon({
-      iconUrl: markerRedIcon
+      iconUrl: markerRedIcon,
     });
 
   let icon = localStorage.getItem("bridge" + position) ? greenIcon : blueIcon;

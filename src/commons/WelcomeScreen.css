@@ -1,54 +1,54 @@
 .welcome-screen {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--primary-color);
-    opacity: 0.95;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column nowrap;
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-    color: var(--fc-light)
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  opacity: 0.95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  color: var(--fc-light);
 }
 
 .welcome-screen.hidden {
-    opacity: 0;
-    top: -100%;
-    overflow: hidden;
+  opacity: 0;
+  top: -100%;
+  overflow: hidden;
 }
 
 .welcome-screen-name {
-    padding: 1.5rem;
-    text-align: center;
-    text-transform: uppercase;
+  padding: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .welcome-screen-description {
-    padding: 1.5rem;
-    text-align: center;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .welcome-screen__btn {
-    margin-top: 6rem;
-    width: 10rem;
-    height: 5vh;
-    border-radius: 25px;
-    border: 3px solid var(--color-dark-btn);
-    font-size: var(--fs-normal);
+  margin-top: 6rem;
+  width: 10rem;
+  height: 5vh;
+  border-radius: 25px;
+  border: 3px solid var(--color-dark-btn);
+  font-size: var(--fs-normal);
 }
 
 .welcome-screen__btn:hover {
-    background-color: var(--color-dark-btn);
-    color: var(--fc-light);
-    transition: all 0.25s ease-in-out;
+  background-color: var(--color-dark-btn);
+  color: var(--fc-light);
+  transition: all 0.25s ease-in-out;
 }
 
 .welcome-screen__btn:active {
-    transform: scale(110%);
-    transition: all 0.25s ease-in-out;
+  transform: scale(110%);
+  transition: all 0.25s ease-in-out;
 }

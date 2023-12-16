@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap");
 
 /* CONFIG */
 
@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary-color: #060F5C;
+  --primary-color: #060f5c;
   --fs-small: 1rem;
   --fs-normal: 1.5rem;
   --fs-big: 2rem;
@@ -17,8 +17,8 @@
   --color-dark-btn: #343a40;
   --color-exit-btn: #636569;
   --color-exit-press-btn: #38383b;
-  --accent-color: #E64614;
-  --secondary-color: #F3C658;
+  --accent-color: #e64614;
+  --secondary-color: #f3c658;
 }
 
 /* MAIN */
@@ -65,7 +65,8 @@ body {
     padding: 0 3rem !important;
   }
 
-  .card__description::-webkit-scrollbar, .question__description::-webkit-scrollbar {
+  .card__description::-webkit-scrollbar,
+  .question__description::-webkit-scrollbar {
     opacity: 0 !important;
     width: 0 !important;
   }
