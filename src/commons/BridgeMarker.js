@@ -26,17 +26,14 @@ function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => {
-    if (localStorage.getItem("bridge" + position)) {
-      return;
-    }
     setShowModal(true);
   };
 
   const onQuestionSolved = () => {
     localStorage.setItem("bridge" + position, "true");
     icon = greenIcon;
-    setShowModal(false);
-    upperOnQuestionSolved();
+    setShowModal(true);
+    setTimeout(() => upperOnQuestionSolved(), 2000);
   };
 
   return (

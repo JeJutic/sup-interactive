@@ -1,6 +1,6 @@
 import "../css/App.css";
 import myMap from "../img/map.webp";
-import { MapContainer, ImageOverlay, useMap } from "react-leaflet";
+import { ImageOverlay, MapContainer, useMap } from "react-leaflet";
 import React, { useState } from "react";
 import BridgeMarkerList from "../commons/BridgeMarker";
 import WelcomeScreen from "../commons/WelcomeScreen";
@@ -21,6 +21,12 @@ function App() {
       bridges.forEach((b) => {
         unsetBridgeFinished(b);
       });
+      if (document.getElementsByClassName("card") > 0) {
+        const element =
+          document.getElementsByClassName("card")[0].parentNode.parentNode
+            .parentNode;
+        element.parentNode.removeChild(element);
+      }
     }
   };
 

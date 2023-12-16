@@ -43,40 +43,79 @@ function DefaultQuestion({
   onClick,
   closeButton,
   onQuestionSolved,
+  hint,
+  position,
 }) {
-  return (
-    <div className="card">
-      <div className="card-front">
-        <div className="white-box" onClick={onClick}>
-          <div className="img__wrapper">
-            <img className="question__img" src={image} alt="..." />
+  if (localStorage.getItem("bridge" + position) === null) {
+    return (
+      <div className="card">
+        <div className="card-front">
+          <div className="white-box" onClick={onClick}>
+            <h1 className="question__header">{question}</h1>
+            <p className="question__description">{questionDescription}</p>
+            <div className="question__answers">
+              <AnswerButtonList
+                options={options}
+                onQuestionSolved={onQuestionSolved}
+              />
+            </div>
+            <div className="bottom__img__wrapper">
+              <img className="bottom__img" src={bottomImg} alt="..." />
+            </div>
           </div>
-          <h1 className="card__header">{header}</h1>
-          <p className="card__description">{description}</p>
-          <div className="bottom__img__wrapper">
-            <img className="bottom__img" src={bottomImg} alt="..." />
-          </div>
+          {closeButton}
         </div>
-        {closeButton}
-      </div>
-      <div className="card-back">
-        <div className="white-box" onClick={onClick}>
-          <h1 className="question__header">{question}</h1>
-          <p className="question__description">{questionDescription}</p>
-          <div className="question__answers">
-            <AnswerButtonList
-              options={options}
-              onQuestionSolved={onQuestionSolved}
-            />
+        <div className="card-back">
+          <div className="white-box" onClick={onClick}>
+            <div className="img__wrapper">
+              <img className="question__img" src={image} alt="..." />
+            </div>
+            <h1 className="card__header">{header}</h1>
+            <p className="card__description">
+              Неправильный ответ
+              <br />
+              {hint}
+            </p>
+            <div className="bottom__img__wrapper">
+              <img className="bottom__img" src={bottomImg} alt="..." />
+            </div>
           </div>
-          <div className="bottom__img__wrapper">
-            <img className="bottom__img" src={bottomImg} alt="..." />
-          </div>
+          {closeButton}
         </div>
-        {closeButton}
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="card">
+        <div className="card-front">
+          <div className="white-box" onClick={onClick}>
+            <div className="img__wrapper">
+              <img className="question__img" src={image} alt="..." />
+            </div>
+            <h1 className="card__header">{header}</h1>
+            <p className="card__description">{description}</p>
+            <div className="bottom__img__wrapper">
+              <img className="bottom__img" src={bottomImg} alt="..." />
+            </div>
+          </div>
+          {closeButton}
+        </div>
+        <div className="card-back">
+          <div className="white-box" onClick={onClick}>
+            <div className="img__wrapper">
+              <img className="question__img" src={image} alt="..." />
+            </div>
+            <h1 className="card__header">{header}</h1>
+            <p className="card__description">{description}</p>
+            <div className="bottom__img__wrapper">
+              <img className="bottom__img" src={bottomImg} alt="..." />
+            </div>
+          </div>
+          {closeButton}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default DefaultQuestion;
