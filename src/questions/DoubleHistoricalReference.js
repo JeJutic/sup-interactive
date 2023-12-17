@@ -1,15 +1,26 @@
 import bottomImg from "../img/bottomImg.svg";
 import React from "react";
 
-function HistoricalReference({ header, description, image, closeButton }) {
+function HistoricalReference({ historicalInfo, closeButton }) {
   return (
     <>
       <div className="white-box">
         <div className="img__wrapper">
-          <img className="question__img" src={image} alt="..." />
+          <img
+            className="question__img"
+            src={historicalInfo.images[0]}
+            alt="..."
+          />
         </div>
-        <h1 className="card__header">{header}</h1>
-        <p className="card__description">{description}</p>
+        <div className="img__wrapper">
+          <img
+            className="question__img"
+            src={historicalInfo.images[1]}
+            alt="..."
+          />
+        </div>
+        <h1 className="card__header">{historicalInfo.header}</h1>
+        <p className="card__description">{historicalInfo.description}</p>
         <div className="bottom__img__wrapper">
           <img className="bottom__img" src={bottomImg} alt="..." />
         </div>
@@ -19,17 +30,10 @@ function HistoricalReference({ header, description, image, closeButton }) {
   );
 }
 
-function DoubleHistoricalReference({
-  header,
-  description,
-  image,
-  closeButton,
-}) {
+function DoubleHistoricalReference({ historicalInfo, closeButton }) {
   let historical = (
     <HistoricalReference
-      header={header}
-      description={description}
-      image={image}
+      historicalInfo={historicalInfo}
       closeButton={closeButton}
     />
   );
