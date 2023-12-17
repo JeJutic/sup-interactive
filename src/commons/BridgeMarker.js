@@ -6,7 +6,7 @@ import QuestionModal from "../questions/QuestionModal";
 import markerYellowIcon from "../img/yellow-marker.png";
 import markerRedIcon from "../img/red-marker.png";
 
-function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
+function BridgeMarker({ position, overlayComponent, checkFinish }) {
   const LeafIcon = L.Icon.extend({
     options: {
       iconSize: [33, 47],
@@ -26,17 +26,13 @@ function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => {
-    if (localStorage.getItem("bridge" + position)) {
-      return;
-    }
     setShowModal(true);
   };
 
   const onQuestionSolved = () => {
     localStorage.setItem("bridge" + position, "true");
     icon = greenIcon;
-    setShowModal(false);
-    upperOnQuestionSolved();
+    setShowModal(true);
   };
 
   return (
@@ -52,12 +48,13 @@ function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
         showModal={showModal}
         setShowModal={setShowModal}
         onQuestionSolved={onQuestionSolved}
+        checkFinish={checkFinish}
       />
     </Fragment>
   );
 }
 
-function BridgeMarkerList({ upperOnQuestionSolved }) {
+function BridgeMarkerList({ checkFinish }) {
   return (
     <ul>
       {bridges.map((bridge) => (
@@ -65,7 +62,7 @@ function BridgeMarkerList({ upperOnQuestionSolved }) {
           <BridgeMarker
             position={bridge.position}
             overlayComponent={bridge.overlayComponent}
-            upperOnQuestionSolved={upperOnQuestionSolved}
+            checkFinish={checkFinish}
           />
         </li>
       ))}
