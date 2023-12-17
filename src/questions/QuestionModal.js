@@ -2,7 +2,7 @@ import "./QuestionModal.css";
 import React, { Fragment, useState } from "react";
 import Modal from "react-overlays/Modal";
 
-import { Transition, CSSTransition } from "react-transition-group";
+import { CSSTransition, Transition } from "react-transition-group";
 
 function CloseButton({ onClick }) {
   return (
@@ -33,12 +33,14 @@ function QuestionModal({
   showModal,
   setShowModal,
   onQuestionSolved,
+  checkFinish,
 }) {
   const [showFront, setShowFront] = useState(true);
 
   const closeModal = () => {
     setShowModal(false);
     setTimeout(() => setShowFront(true), 300);
+    checkFinish();
   };
 
   const btn = <CloseButton onClick={closeModal} />;
