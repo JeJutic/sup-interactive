@@ -1,3 +1,4 @@
+import "./QuestionCard.css";
 import "./QuestionCardTransition.css";
 import bottomImg from "../img/bottomImg.svg";
 import React from "react";
