@@ -2,9 +2,9 @@ import "./DefaultQuestionTransition.css";
 import "./DefaultQuestion.css";
 import React from "react";
 
-import bottomImg from "../img/bottomImg.svg";
 import caretRight from "../img/caret-right.svg";
 import caretLeft from "../img/caret-left-fill.svg";
+import FullQuestionCard from "./QuestionCard";
 
 function AnswerButton({ text, onClick }) {
   return (
@@ -18,104 +18,44 @@ function AnswerButton({ text, onClick }) {
   );
 }
 
-function AnswerButtonList({ options, onQuestionSolved }) {
+function AnswerButtonList({ options, onQuestionSolved, flip }) {
   return (
-    <ul className="question__answers__ul">
-      {options.map((option) => (
-        <li key={option.text}>
-          <AnswerButton
-            text={option.text}
-            onClick={option.correct ? onQuestionSolved : () => {}}
-          />
-        </li>
-      ))}
-    </ul>
+    <div className="question__answers">
+      <ul className="question__answers__ul">
+        {options.map((option) => (
+          <li key={option.text}>
+            <AnswerButton
+              text={option.text}
+              onClick={() => {
+                flip();
+                if (option.correct) {
+                  onQuestionSolved();
+                }
+              }}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
-function DefaultQuestion({
-  question,
-  image,
-  header,
-  description,
-  questionDescription,
-  options,
-  onClick,
-  closeButton,
-  onQuestionSolved,
-  hint,
-  position,
-}) {
-  if (localStorage.getItem("bridge" + position) === null) {
-    return (
-      <div className="card">
-        <div className="card-front">
-          <div className="white-box" onClick={onClick}>
-            <h1 className="question__header">{question}</h1>
-            <p className="question__description">{questionDescription}</p>
-            <div className="question__answers">
-              <AnswerButtonList
-                options={options}
-                onQuestionSolved={onQuestionSolved}
-              />
-            </div>
-            <div className="bottom__img__wrapper">
-              <img className="bottom__img" src={bottomImg} alt="..." />
-            </div>
-          </div>
-          {closeButton}
-        </div>
-        <div className="card-back">
-          <div className="white-box" onClick={onClick}>
-            <div className="img__wrapper">
-              <img className="question__img" src={image} alt="..." />
-            </div>
-            <h1 className="card__header">{header}</h1>
-            <p className="card__description">
-              Неправильный ответ
-              <br />
-              {hint}
-            </p>
-            <div className="bottom__img__wrapper">
-              <img className="bottom__img" src={bottomImg} alt="..." />
-            </div>
-          </div>
-          {closeButton}
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="card">
-        <div className="card-front">
-          <div className="white-box" onClick={onClick}>
-            <div className="img__wrapper">
-              <img className="question__img" src={image} alt="..." />
-            </div>
-            <h1 className="card__header">{header}</h1>
-            <p className="card__description">{description}</p>
-            <div className="bottom__img__wrapper">
-              <img className="bottom__img" src={bottomImg} alt="..." />
-            </div>
-          </div>
-          {closeButton}
-        </div>
-        <div className="card-back">
-          <div className="white-box" onClick={onClick}>
-            <div className="img__wrapper">
-              <img className="question__img" src={image} alt="..." />
-            </div>
-            <h1 className="card__header">{header}</h1>
-            <p className="card__description">{description}</p>
-            <div className="bottom__img__wrapper">
-              <img className="bottom__img" src={bottomImg} alt="..." />
-            </div>
-          </div>
-          {closeButton}
-        </div>
-      </div>
-    );
-  }
+function DefaultQuestion({ cardData, options, flip, closeButton }) {
+  let interactive = (
+    <AnswerButtonList
+      options={options}
+      onQuestionSolved={cardData.onQuestionSolved}
+      flip={flip}
+    />
+  );
+  return (
+    <FullQuestionCard
+      cardData={cardData}
+      closeButton={closeButton}
+      interactiveComponent={interactive}
+      flip={flip}
+    />
+  );
 }
 
 export default DefaultQuestion;

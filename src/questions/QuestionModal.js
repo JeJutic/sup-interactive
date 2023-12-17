@@ -55,7 +55,7 @@ function QuestionModal({
           <CSSTransition in={showFront} timeout={300} classNames="flip">
             <div className="question">
               {React.cloneElement(overlayComponent(onQuestionSolved), {
-                onClick: () => {
+                flip: () => {
                   setShowFront((v) => !v);
                 },
                 closeButton: btn,
