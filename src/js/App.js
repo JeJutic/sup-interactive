@@ -15,24 +15,18 @@ import addSights from "./sights";
 function App() {
   const [showFinishScreen, setShowFinishScreen] = useState(false);
 
-  const onQuestionSolved = () => {
+  const checkFinish = () => {
     if (countFinishedBridges() === bridges.length) {
-      setShowFinishScreen(true);
       bridges.forEach((b) => {
         unsetBridgeFinished(b);
       });
-      if (document.getElementsByClassName("card") > 0) {
-        const element =
-          document.getElementsByClassName("card")[0].parentNode.parentNode
-            .parentNode;
-        element.parentNode.removeChild(element);
-      }
+      setShowFinishScreen(true);
     }
   };
 
   function MapSettings() {
     const map = useMap();
-    var zsh = new ZoomShowHide();
+    const zsh = new ZoomShowHide();
     zsh.addTo(map);
 
     addSmallLabels(zsh, config.smallLabelZoomThreshold, null);
@@ -53,7 +47,7 @@ function App() {
       >
         <MapSettings />
         <ImageOverlay bounds={config.mapContainer.bounds} url={myMap} />
-        <BridgeMarkerList upperOnQuestionSolved={onQuestionSolved} />
+        <BridgeMarkerList checkFinish={checkFinish} />
       </MapContainer>
     </>
   );
