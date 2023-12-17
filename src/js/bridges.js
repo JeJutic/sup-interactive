@@ -1,5 +1,5 @@
 import React from "react";
-import DefaultQuestion from "../questions/DefaultQuestion";
+import DefaultQuestion from "../questions/types/DefaultQuestion";
 
 import testBridge from "../img/test-bridge.jpg";
 import stoneBridge from "../img/stone_bridge.png";

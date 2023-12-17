@@ -1,3 +1,4 @@
+import "./QuestionCardTransition.css";
 import bottomImg from "../img/bottomImg.svg";
 import React from "react";
 import DoubleHistoricalReference from "./DoubleHistoricalReference";

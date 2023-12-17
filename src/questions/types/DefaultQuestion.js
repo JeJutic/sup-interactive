@@ -1,10 +1,9 @@
-import "./DefaultQuestionTransition.css";
 import "./DefaultQuestion.css";
 import React from "react";
 
-import caretRight from "../img/caret-right.svg";
-import caretLeft from "../img/caret-left-fill.svg";
-import FullQuestionCard from "./QuestionCard";
+import caretRight from "../../img/caret-right.svg";
+import caretLeft from "../../img/caret-left-fill.svg";
+import FullQuestionCard from "../QuestionCard";
 
 function AnswerButton({ text, onClick }) {
   return (
