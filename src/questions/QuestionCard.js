@@ -14,6 +14,9 @@ function QuestionCard({
     <div className="card">
       <div className="card-front">
         <div className="white-box">
+          <div className="bottom__img__wrapper">
+            <img className="bottom__img" src={questionInfo.image} alt="..." />
+          </div>
           <h1 className="question__header">{questionInfo.question}</h1>
           <p className="question__description">
             {questionInfo.questionDescription}
@@ -64,9 +67,7 @@ function FullQuestionCard({
   } else {
     return (
       <DoubleHistoricalReference
-        header={cardData.questionInfo.header}
-        description={cardData.questionInfo.description}
-        image={cardData.questionInfo.image}
+        historicalInfo={cardData.historicalInfo}
         closeButton={closeButton}
       />
     );
