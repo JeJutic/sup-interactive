@@ -1,0 +1,31 @@
+.card {
+    /* background: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.card__image {
+    height: 120vh;
+    width: 100%;
+}
+.card__content {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    right: 30%;
+    bottom: 30%;
+    /* max-width: 60%;
+    max-height: 60%; */
+}
+
+@media (max-width: 1200px) {
+    .card__image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
