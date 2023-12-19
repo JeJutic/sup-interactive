@@ -12,6 +12,11 @@ import addSmallLabels from "./smallLabels";
 import addBigLabels from "./bigLabels";
 import addSights from "./sights";
 
+import InteractiveTask from '../questions/InteractiveTask'
+import questions from '../questions/questions' 
+import InteractiveMain from "../questions/InteractiveMain";
+
+
 function App() {
   const [showFinishScreen, setShowFinishScreen] = useState(false);
 
@@ -38,7 +43,7 @@ function App() {
 
   return (
     <>
-      <WelcomeScreen />
+      {/* <WelcomeScreen />
       {showFinishScreen && <FinishScreen />}
       <MapContainer
         className="map"
@@ -48,7 +53,8 @@ function App() {
         <MapSettings />
         <ImageOverlay bounds={config.mapContainer.bounds} url={myMap} />
         <BridgeMarkerList checkFinish={checkFinish} />
-      </MapContainer>
+      </MapContainer> */}
+      <InteractiveMain />
     </>
   );
 }
