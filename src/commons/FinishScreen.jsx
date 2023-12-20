@@ -1,19 +1,24 @@
-import "./WelcomeScreen.css";
+// FinishScreen.jsx
+import React from "react";
+import "./FinishScreen.css";
 
-export const FinishScreen = () => {
+const FinishScreen = () => {
   const handleClick = () => window.location.reload();
 
   return (
-    <div>
-      <div className={`welcome-screen`}>
-        <h1 className="welcome-screen-name">Экран завершения</h1>
-        <p className="welcome-screen-description">
-          Поздравляем с прохождением. Вы можете перепройти, перезагрузив
-          страницу.
+    <div className="frame">
+      <div className="content">
+        <h1 className="congrats-header">ВЫ ПРОШЛИ!</h1>
+        <p className="p">
+          Поздравляем, вы ответили на все вопросы!
+          Перезагрузите страницу, чтобы пройти заново
         </p>
-        <button className="welcome-screen__btn" onClick={handleClick}>
-          Перезагрузить
-        </button>
+        <div className="button-wrapper">
+          <button className="button-inside" onClick={handleClick}>Перезагрузить</button>
+        </div>
+      </div>
+      <div className="bottom__img__wrapper">
+        <div className="bottom__img"></div>
       </div>
     </div>
   );

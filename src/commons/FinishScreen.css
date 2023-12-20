@@ -1,0 +1,104 @@
+/* FinishScreen.css */
+
+#body {
+    overflow: hidden;
+}
+
+.frame {
+    background-color: #060f5c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.content {
+    background-color: #060f5c;
+    width: 80vw;
+    top: 0;
+    height: 70%;
+    margin-bottom: 20%;
+}
+
+.congrats-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: calc(3.5vw + 1.5vh);
+    margin: 2em 1vh 1vh;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 1px 0 0 white, 4px 1px 0 var(--accent-color);
+    color: var(--secondary-color);
+    letter-spacing: 0.15rem;
+    word-wrap:break-word;
+}
+
+.p {
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: calc(1.5vw + 1.5vh);
+    font-weight: 400;
+    letter-spacing: 0.1vw;
+    line-height: calc(1.5vw + 1.5vh);
+    position: relative;
+    text-align: center;
+    margin: 20vh auto 1vw;
+    transform: translateY(-50%);
+}
+
+
+.button-wrapper {
+    line-height: normal;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* -ms-transform: translateY(-50%); */
+    /* transform: translateX(-50%); */
+
+}
+   
+.bottom__img__wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+}
+
+.bottom__img { /* center bottom no-repeat fixed */
+    background-image: url(../img/bottom_finish_page.png);
+    background-position: center bottom;
+    background-size: 100vw 40vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+.button-inside{
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #e64614;
+    padding: 10px 30px;
+    border: solid #f3c658 3px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    cursor: pointer;
+    margin: auto;
+    z-index: 1;
+}
+
+.button-inside:hover{
+    transition : 1000ms;
+    padding: 10px 50px;
+    transform : translateY(-0px);
+    background-color: #fff;
+    color: #0066cc;
+    border: solid 3px #0066cc;
+}
