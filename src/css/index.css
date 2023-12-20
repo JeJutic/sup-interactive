@@ -31,17 +31,24 @@ body {
 
 /* UTILITY */
 
+.subheading {
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 1px 0 0 white, 4px 1px 0 var(--accent-color);
+  color: var(--secondary-color);
+  letter-spacing: 0.15rem;
+  white-space: nowrap;
+}
+
 /* CLASSES */
 
 /* MEDIA */
 
 @media screen and (min-width: 768px) {
-  .white-box {
-    width: 65% !important;
-  }
-
-  .close-button {
-    right: 19% !important;
+  html {
+    font-size: 1.25rem;
   }
 
   .bottom__img__wrapper {
@@ -54,20 +61,8 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-  body {
-    font-size: var(--fs-normal);
-  }
-
   .answer__button {
     font-size: var(--fs-normal);
-  }
-
-  .white-box {
-    width: 40% !important;
-  }
-
-  .close-button {
-    right: 32% !important;
   }
 
   .card__description {
@@ -106,11 +101,15 @@ body {
   .img__wrapper {
     height: 35% !important;
   }
+
+  .welcome__bottom__img__wrapper {
+    height: 45% !important;
+  }
 }
 
 @media screen and (min-width: 2000px) {
-  body {
-    font-size: var(--fs-large);
+  html {
+    font-size: 1.5rem;
   }
 
   .question__description {
@@ -122,5 +121,13 @@ body {
   .question__answers {
     height: 30% !important;
     padding: 1rem 4rem !important;
+  }
+
+  .welcome__p {
+    margin-top: 5em !important;
+  }
+
+  .answer__button {
+    height: 70px !important;
   }
 }

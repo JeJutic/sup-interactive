@@ -22,10 +22,17 @@
   overflow: hidden;
 }
 
-.welcome-screen-name {
-  padding: 1.5rem;
+.welcome-header {
+  padding: 5rem 0 1.5rem;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 1px 0 0 white, 4px 1px 0 var(--accent-color);
+  color: var(--secondary-color);
+  letter-spacing: 0.15rem;
+  white-space: nowrap;
 }
 
 .welcome-screen-description {
@@ -51,4 +58,33 @@
 .welcome-screen__btn:active {
   transform: scale(110%);
   transition: all 0.25s ease-in-out;
+}
+
+.welcome__bottom__img__wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35%;
+}
+
+.welcome__bottom__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.description {
+  text-align: center;
+}
+
+.welcome__p {
+  margin: 3rem 0 2rem;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.button-inside {
+  font-size: 0.75rem !important;
 }
