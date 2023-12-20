@@ -10,15 +10,17 @@ const FinishScreen = () => {
       <div className="content">
         <h1 className="congrats-header">ВЫ ПРОШЛИ!</h1>
         <p className="p">
-          Поздравляем, вы ответили на все вопросы!
-          Перезагрузите страницу, чтобы пройти заново
+          Поздравляем, вы ответили на все вопросы! Перезагрузите страницу, чтобы
+          пройти заново
         </p>
         <div className="button-wrapper">
-          <button className="button-inside" onClick={handleClick}>Перезагрузить</button>
+          <button className="button-inside" onClick={handleClick}>
+            Перезагрузить
+          </button>
         </div>
       </div>
-      <div className="bottom__img__wrapper">
-        <div className="bottom__img"></div>
+      <div className="finish__bottom__img__wrapper">
+        <div className="finish__bottom__img"></div>
       </div>
     </div>
   );

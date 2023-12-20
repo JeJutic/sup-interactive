@@ -11,11 +11,11 @@ function QuestionCard({
   closeButton,
 }) {
   return (
-    <div className="card">
+    <div className={"card"}>
       <div className="card-front">
         <div className="white-box">
-          <div className="bottom__img__wrapper">
-            <img className="bottom__img" src={questionInfo.image} alt="..." />
+          <div className="card__img__wrapper">
+            <img className="card__img" src={questionInfo.image} alt="..." />
           </div>
           <h1 className="question__header">{questionInfo.question}</h1>
           <p className="question__description">
@@ -28,10 +28,10 @@ function QuestionCard({
         {interactiveComponent}
         {closeButton}
       </div>
-      <div className="card-back">
+      <div className="card-back hist">
         <div className="white-box" onClick={flip}>
-          <div className="img__wrapper">
-            <img className="question__img" src={questionInfo.image} alt="..." />
+          <div className="card__img__wrapper">
+            <img className="card__img" src={questionInfo.image} alt="..." />
           </div>
           <h1 className="card__header">{questionInfo.header}</h1>
           <p className="card__description">

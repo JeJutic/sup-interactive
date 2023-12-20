@@ -1,4 +1,4 @@
-// import "./DefaultQuestion.css";
+import "./TextInputQuestion.css";
 import React, { useState } from "react";
 
 import FullQuestionCard from "../QuestionCard";
@@ -12,7 +12,7 @@ function AnswerForm({ upperHandleSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <label>
         <input
           type="text"

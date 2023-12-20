@@ -59,14 +59,14 @@
 
 }
    
-.bottom__img__wrapper {
+.finish__bottom__img__wrapper {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 30%;
 }
 
-.bottom__img { /* center bottom no-repeat fixed */
+.finish__bottom__img { /* center bottom no-repeat fixed */
     background-image: url(../img/bottom_finish_page.png);
     background-position: center bottom;
     background-size: 100vw 40vh;
