@@ -1,7 +1,7 @@
 import "../css/App.css";
 import myMap from "../img/map.webp";
 import { ImageOverlay, MapContainer, useMap } from "react-leaflet";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BridgeMarkerList from "../commons/BridgeMarker";
 import NearestMarker from "../commons/NearestMarker";
 import WelcomeScreen from "../commons/WelcomeScreen";
@@ -14,6 +14,10 @@ import addBigLabels from "./bigLabels";
 import addSights from "./sights";
 
 function App() {
+  useEffect(() => {
+    document.title = 'Фонтанка SUP: Квест';
+  }, []);
+
   const [showFinishScreen, setShowFinishScreen] = useState(false);
 
   const checkFinish = () => {
