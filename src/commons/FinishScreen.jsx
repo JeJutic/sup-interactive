@@ -8,13 +8,13 @@ const FinishScreen = () => {
   return (
     <div className="frame">
       <div className="content">
-        <h1 className="congrats-header">ПРИВЕТСТВЕННЫЙ ЭКРАН</h1>
+        <h1 className="congrats-header">ВЫ ПРОШЛИ!</h1>
         <p className="p">
-          Этот праздник уже восемь лет вместе с нами создаете вы — своей энергией, прекрасными костюмами и настроением!
-          Всем легкой воды, всем счастья. Петербург — лучший. Это «Фонтанка.ру», это — «Фонтанка SUP
+          Поздравляем, вы ответили на все вопросы!
+          Перезагрузите страницу, чтобы пройти заново
         </p>
         <div className="button-wrapper">
-          <button className="button-inside" onClick={handleClick}>Поплыли</button>
+          <button className="button-inside" onClick={handleClick}>Перезагрузить</button>
         </div>
       </div>
       <div className="bottom__img__wrapper">
