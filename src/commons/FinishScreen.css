@@ -25,13 +25,14 @@
     text-align: center;
     text-transform: uppercase;
     font-size: calc(3.5vw + 1.5vh);
-    margin: 15vh 1vh 1vh;
+    margin: 2em 1vh 1vh;
     font-family: "Inter", sans-serif;
     font-style: italic;
     font-weight: bold;
     text-shadow: 1px 0 0 white, 4px 1px 0 var(--accent-color);
     color: var(--secondary-color);
     letter-spacing: 0.15rem;
+    word-wrap:break-word;
 }
 
 .p {
@@ -43,21 +44,19 @@
     line-height: calc(1.5vw + 1.5vh);
     position: relative;
     text-align: center;
-    margin: 20vh 1vh 1vh;
+    margin: 20vh auto 1vw;
     transform: translateY(-50%);
-    width: 60%;
-    left: 20%;
 }
 
 
 .button-wrapper {
     line-height: normal;
-    margin-left: 55%;
-    width: 15vw;
-    -ms-transform: translateY(-50%);
-    transform: translateX(-50%);
-    position: relative;
-    bottom: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* -ms-transform: translateY(-50%); */
+    /* transform: translateX(-50%); */
+
 }
    
 .bottom__img__wrapper {
@@ -79,30 +78,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
 
 .button-inside{
-font-family: Roboto, sans-serif;
-font-weight: 0;
-font-size: 14px;
-color: #fff;
-background-color: #e64614;
-padding: 10px 30px;
-border: solid #f3c658 3px;
-box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
-border-radius: 50px;
-transition : 1000ms;
-transform: translateY(0);
-display: flex;
-flex-direction: row;
-align-items: center;
-cursor: pointer;
-
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #e64614;
+    padding: 10px 30px;
+    border: solid #f3c658 3px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    cursor: pointer;
+    margin: auto;
+    z-index: 1;
 }
 
 .button-inside:hover{
-transition : 1000ms;
-padding: 10px 50px;
-transform : translateY(-0px);
-background-color: #fff;
-color: #0066cc;
-border: solid 3px #0066cc;
-
+    transition : 1000ms;
+    padding: 10px 50px;
+    transform : translateY(-0px);
+    background-color: #fff;
+    color: #0066cc;
+    border: solid 3px #0066cc;
 }
