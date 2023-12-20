@@ -17,9 +17,9 @@ function QuestionCard({
           <div className="card__img__wrapper">
             <img className="card__img" src={questionInfo.image} alt="..." />
           </div>
-          <h1 className="question__header">{questionInfo.question}</h1>
+          <h1 className="question__header">{questionInfo.title}</h1>
           <p className="question__description">
-            {questionInfo.questionDescription}
+            {questionInfo.description}
           </p>
           <div className="bottom__img__wrapper">
             <img className="bottom__img" src={bottomImg} alt="..." />
