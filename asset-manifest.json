@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sup-interactive/static/css/main.5a87568c.css",
-    "main.js": "/sup-interactive/static/js/main.e19b222f.js",
+    "main.css": "/sup-interactive/static/css/main.bf04dd68.css",
+    "main.js": "/sup-interactive/static/js/main.834746cf.js",
     "static/media/stone_bridge.png": "/sup-interactive/static/media/stone_bridge.76c12fa7c103492a4992.png",
     "static/media/map.webp": "/sup-interactive/static/media/map.dbe08d088c27c7864ba3.webp",
     "static/media/bottom_finish_page.png": "/sup-interactive/static/media/bottom_finish_page.673b742a297bed8bdde0.png",
@@ -12,11 +12,11 @@
     "index.html": "/sup-interactive/index.html",
     "static/media/caret-right.svg": "/sup-interactive/static/media/caret-right.f0e90ee70f07de465db504d1daf59e3a.svg",
     "static/media/caret-left-fill.svg": "/sup-interactive/static/media/caret-left-fill.eef5702c324970894bf28b0068d643a8.svg",
-    "main.5a87568c.css.map": "/sup-interactive/static/css/main.5a87568c.css.map",
-    "main.e19b222f.js.map": "/sup-interactive/static/js/main.e19b222f.js.map"
+    "main.bf04dd68.css.map": "/sup-interactive/static/css/main.bf04dd68.css.map",
+    "main.834746cf.js.map": "/sup-interactive/static/js/main.834746cf.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a87568c.css",
-    "static/js/main.e19b222f.js"
+    "static/css/main.bf04dd68.css",
+    "static/js/main.834746cf.js"
   ]
 }
