@@ -1,6 +1,6 @@
 import "../css/App.css";
 import myMap from "../img/map.webp";
-import { MapContainer, ImageOverlay, useMap } from "react-leaflet";
+import { ImageOverlay, MapContainer, useMap } from "react-leaflet";
 import React, { useState } from "react";
 import BridgeMarkerList from "../commons/BridgeMarker";
 import NearestMarker from "../commons/NearestMarker";
@@ -16,18 +16,18 @@ import addSights from "./sights";
 function App() {
   const [showFinishScreen, setShowFinishScreen] = useState(false);
 
-  const onQuestionSolved = () => {
+  const checkFinish = () => {
     if (countFinishedBridges() === bridges.length) {
-      setShowFinishScreen(true);
       bridges.forEach((b) => {
         unsetBridgeFinished(b);
       });
+      setShowFinishScreen(true);
     }
   };
 
   function MapSettings() {
     const map = useMap();
-    var zsh = new ZoomShowHide();
+    const zsh = new ZoomShowHide();
     zsh.addTo(map);
 
     addSmallLabels(zsh, config.smallLabelZoomThreshold, null);
@@ -48,7 +48,7 @@ function App() {
       >
         <MapSettings />
         <ImageOverlay bounds={config.mapContainer.bounds} url={myMap} />
-        <BridgeMarkerList upperOnQuestionSolved={onQuestionSolved} />
+        <BridgeMarkerList checkFinish={checkFinish} />
         <NearestMarker />
       </MapContainer>
     </>
