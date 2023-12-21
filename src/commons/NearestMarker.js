@@ -13,11 +13,13 @@ function NearestMarker() {
     },
   });
 
-  let nearestBridgeIcon = new LeafIcon({ // поменять
+  let nearestBridgeIcon = new LeafIcon({
+    // поменять
     iconUrl: markerRedIcon,
   });
 
-  let userIcon = new LeafIcon({ // поменять
+  let userIcon = new LeafIcon({
+    // поменять
     iconUrl: markerRedIcon,
   });
 

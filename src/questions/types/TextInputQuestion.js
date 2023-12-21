@@ -2,6 +2,7 @@ import "./TextInputQuestion.css";
 import React, { useState } from "react";
 
 import FullQuestionCard from "../QuestionCard";
+import Button from "../../commons/Button";
 
 function AnswerForm({ upperHandleSubmit }) {
   const [answer, setAnswer] = useState("");
@@ -13,14 +14,25 @@ function AnswerForm({ upperHandleSubmit }) {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <label>
-        <input
-          type="text"
-          value={answer}
-          onChange={(e) => setAnswer(e.target.value)}
+      <div className="input-section">
+        <label>
+          <input
+            type="text"
+            className="user-input"
+            value={answer}
+            placeholder="Введите ответ"
+            onChange={(e) => setAnswer(e.target.value)}
+          />
+        </label>
+      </div>
+      <div>
+        <Button
+          text="Отправить"
+          props={{
+            type: "submit",
+          }}
         />
-      </label>
-      <input type="submit" value="Проверить" />
+      </div>
     </form>
   );
 }

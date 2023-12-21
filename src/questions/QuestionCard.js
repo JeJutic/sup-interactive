@@ -7,6 +7,7 @@ import DoubleHistoricalReference from "./DoubleHistoricalReference";
 function QuestionCard({
   questionInfo,
   interactiveComponent,
+  sidebarComponent,
   flip,
   closeButton,
 }) {
@@ -14,36 +15,46 @@ function QuestionCard({
     <div className="card noselect">
       <div className="card-front">
         <div className="white-box">
-          <div className="card__img__wrapper">
-            <img className="card__img" src={questionInfo.image} alt="..." />
+          <div className="card-content">
+            <div className="card-content-title">
+              <h1 className="question__title">{questionInfo.title}</h1>
+            </div>
+            <div className="card-content-left">
+              <p className="question__description">
+                {questionInfo.description}
+              </p>
+              <div className="card-content-interactive">
+                {interactiveComponent}
+              </div>
+            </div>
+            <div className="card-content-right">{sidebarComponent}</div>
           </div>
-          <h1 className="question__header">{questionInfo.title}</h1>
-          <p className="question__description">
-            {questionInfo.description}
-          </p>
           <div className="bottom__img__wrapper">
             <img className="bottom__img" src={bottomImg} alt="..." />
           </div>
+          {closeButton}
         </div>
-        {interactiveComponent}
-        {closeButton}
       </div>
       <div className="card-back hist">
-        <div className="white-box" onClick={flip}>
-          <div className="card__img__wrapper">
-            <img className="card__img" src={questionInfo.image} alt="..." />
+        <div className="white-box">
+          <div className="card-content" onClick={flip}>
+            <div className="card-content-title">
+              <h1 className="question__title">{questionInfo.title}</h1>
+            </div>
+            <div className="card-content-left">
+              <p className="question__description">
+                Неправильный ответ
+                <br />
+                {questionInfo.hint}
+              </p>
+            </div>
+            <div className="card-content-right"></div>
           </div>
-          <h1 className="card__header">{questionInfo.header}</h1>
-          <p className="card__description">
-            Неправильный ответ
-            <br />
-            {questionInfo.hint}
-          </p>
           <div className="bottom__img__wrapper">
             <img className="bottom__img" src={bottomImg} alt="..." />
           </div>
+          {closeButton}
         </div>
-        {closeButton}
       </div>
     </div>
   );

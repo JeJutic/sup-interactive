@@ -29,7 +29,9 @@
   font-family: "Inter", sans-serif;
   font-style: italic;
   font-weight: bold;
-  text-shadow: 1px 0 0 white, 4px 1px 0 var(--accent-color);
+  text-shadow:
+    1px 0 0 white,
+    4px 1px 0 var(--accent-color);
   color: var(--secondary-color);
   letter-spacing: 0.15rem;
   white-space: nowrap;

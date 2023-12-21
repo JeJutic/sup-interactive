@@ -1,3 +1,18 @@
-.form {
-    position: absolute;
+.user-input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+  width: 50%;
+  height: 50px;
+  font-size: 1rem;
+}
+
+.user-input::placeholder {
+  color: #9b9b9b;
+}
+
+.input-section {
+  margin-bottom: 1rem;
 }

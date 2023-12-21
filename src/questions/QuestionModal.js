@@ -5,11 +5,7 @@ import Modal from "react-overlays/Modal";
 import { CSSTransition, Transition } from "react-transition-group";
 
 function CloseButton({ onClick }) {
-  return (
-    <button className="close-button" onClick={onClick}>
-      +
-    </button>
-  );
+  return <div className="close-button" onClick={onClick}></div>;
 }
 
 const fadeStyles = {
