@@ -131,3 +131,7 @@ body {
     height: 70px !important;
   }
 }
+
+img {
+  pointer-events: none;
+}
