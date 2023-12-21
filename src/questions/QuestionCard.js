@@ -11,7 +11,7 @@ function QuestionCard({
   closeButton,
 }) {
   return (
-    <div className={"card"}>
+    <div className="card noselect">
       <div className="card-front">
         <div className="white-box">
           <div className="card__img__wrapper">

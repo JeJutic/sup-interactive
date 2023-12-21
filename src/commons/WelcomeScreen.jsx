@@ -11,7 +11,7 @@ const WelcomeScreen = () => {
 
   return (
     <div className={`frame welcome-screen ${isVisible ? "" : "hidden"}`}>
-      <div className="content">
+      <div className="content noselect">
         <h1 className="welcome-header">ФОНТАНКА SUP</h1>
         <p className="description">XI ФЕСТИВАЛЬ САПСЁРФИНГА</p>
         <p className="welcome__p">
