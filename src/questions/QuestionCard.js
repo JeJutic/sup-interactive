@@ -15,19 +15,21 @@ function QuestionCard({
     <div className="card noselect">
       <div className="card-front">
         <div className="white-box">
-          <div className="card-content">
-            <div className="card-content-title">
-              <h1 className="question__title">{questionInfo.title}</h1>
-            </div>
-            <div className="card-content-left">
-              <p className="question__description">
-                {questionInfo.description}
-              </p>
-              <div className="card-content-interactive">
-                {interactiveComponent}
+          <div className="card-content-wrapper">
+            <div className="card-content">
+              <div className="card-content-title">
+                <h1 className="question__title">{questionInfo.title}</h1>
               </div>
+              <div className="card-content-left">
+                <p className="question__description">
+                  {questionInfo.description}
+                </p>
+                <div className="card-content-interactive">
+                  {interactiveComponent}
+                </div>
+              </div>
+              <div className="card-content-right">{sidebarComponent}</div>
             </div>
-            <div className="card-content-right">{sidebarComponent}</div>
           </div>
           <div className="bottom__img__wrapper">
             <img className="bottom__img" src={bottomImg} alt="..." />
