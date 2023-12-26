@@ -2,6 +2,7 @@ import styles from "./WelcomeScreen.module.css";
 import CardModal from "../lib/card/CardModal";
 import { useState } from "react";
 import Card from "../lib/card/Card";
+import CardLayout from "lib/card/CardLayout";
 import FancyHeader from "../lib/FancyHeader";
 import Button from "../lib/Button";
 
@@ -31,7 +32,9 @@ function WelcomeScreen() {
             setShowModal={setShowModal}
         >
             <Card
-                front={content}
+                front={<CardLayout>
+                    {content}
+                </CardLayout>}
                 opacity={0.9}
             />
         </CardModal>

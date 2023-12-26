@@ -1,5 +1,4 @@
 import styles from "./Card.module.css";
-import CardLayout from "./CardLayout";
 
 function Card({
     front,
@@ -9,15 +8,11 @@ function Card({
     return (
         <div className={styles.card} style={{ opacity: opacity }}>
             <div className={styles['card-front']}>
-                <CardLayout>
-                    {front}
-                </CardLayout>
+                {front}
             </div>
             {!!back && 
             <div className={styles['card-back']}>
-                <CardLayout>
-                    {back}
-                </CardLayout>
+                {back}
             </div>}
         </div>
     )
