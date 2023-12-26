@@ -2,7 +2,7 @@ import styles from "./CardLayout.module.css";
 
 import bottomImg from "img/bottomImg.svg";
 
-function CardLayout({ children }) {
+function CardLayout({ extra, children }) {
     return (
         <div className={styles.wrapper}>
             <div className={styles.content}>
@@ -13,6 +13,7 @@ function CardLayout({ children }) {
             <div className={styles['bottom-img-wrapper']}>
                 <img className={styles['bottom-img']} src={bottomImg} alt="..." />
             </div>
+            {extra}
         </div>
     )
 }
