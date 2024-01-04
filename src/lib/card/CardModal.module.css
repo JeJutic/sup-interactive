@@ -1,47 +1,47 @@
 .modal {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .question-wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 2000;
-    perspective: 1000px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2000;
+  perspective: 1000px;
 }
 
 .question {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 2000;
-    transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2000;
+  transform-style: preserve-3d;
 
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.fade>.question-wrapper {
-    top: 100%;
-    transition: transform 300ms ease;
+.fade > .question-wrapper {
+  top: 100%;
+  transition: transform 300ms ease;
 }
 
-.fade-show>.question-wrapper {
-    transform: translateY(-100%);
+.fade-show > .question-wrapper {
+  transform: translateY(-100%);
 }
 
 .shadow {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1001;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
 }

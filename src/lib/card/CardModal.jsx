@@ -2,7 +2,7 @@ import styles from "./CardModal.module.css";
 import "./ModalFlipTransition.css";
 import React, { Fragment, useState } from "react";
 import Modal from "react-overlays/Modal";
-import { createContext } from 'react';
+import { createContext } from "react";
 
 import { CSSTransition, Transition } from "react-transition-group";
 
@@ -18,7 +18,9 @@ const Fade = ({ children, ...props }) => (
     {(status, innerProps) =>
       React.cloneElement(children, {
         ...innerProps,
-        className: `${styles.fade} ${styles[`fade-${fadeStyles[status]}`]} ${children.props.className}`,
+        className: `${styles.fade} ${styles[`fade-${fadeStyles[status]}`]} ${
+          children.props.className
+        }`,
       })
     }
   </Transition>
@@ -26,12 +28,7 @@ const Fade = ({ children, ...props }) => (
 
 export const CardModalContext = createContext(null);
 
-function CardModal({
-  showModal,
-  setShowModal,
-  checkFinish,
-  children
-}) {
+function CardModal({ showModal, setShowModal, checkFinish, children }) {
   const [showFront, setShowFront] = useState(true);
 
   const closeModal = () => {
@@ -48,13 +45,19 @@ function CardModal({
       transition={Fade}
     >
       <Fragment>
-        <div className={styles['question-wrapper']}>
-          <CSSTransition in={showFront} timeout={transitionTimeout} classNames={styles.flip}>
-            <CardModalContext.Provider value={{
+        <div className={styles["question-wrapper"]}>
+          <CSSTransition
+            in={showFront}
+            timeout={transitionTimeout}
+            classNames="flip"
+          >
+            <CardModalContext.Provider
+              value={{
                 flip: () => setShowFront((v) => !v),
                 closeModal: closeModal,
-            }}>
-                {children}
+              }}
+            >
+              <div className={styles["question"]}>{children}</div>
             </CardModalContext.Provider>
           </CSSTransition>
         </div>

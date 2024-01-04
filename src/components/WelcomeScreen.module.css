@@ -1,24 +1,29 @@
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.title {
+  font-size: min(5vw, 2.488rem);
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .subheading {
-    margin-top: 1rem;
+  margin-top: 1rem;
+  font-size: min(5vw, 1.728rem);
 }
 
 .description {
-    margin: 1rem 1rem 0;
-    text-align: center;
+  margin: 1rem 1rem 0;
+  text-align: center;
 }

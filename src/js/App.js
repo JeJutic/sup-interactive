@@ -4,7 +4,7 @@ import { ImageOverlay, MapContainer, useMap } from "react-leaflet";
 import React, { useState } from "react";
 import BridgeMarkerList from "../commons/BridgeMarker";
 import NearestMarker from "../commons/NearestMarker";
-import WelcomeScreen from "../commons/WelcomeScreen";
+import WelcomeScreen from "../components/WelcomeScreen";
 import FinishScreen from "../commons/FinishScreen";
 import { bridges } from "./bridges";
 import config from "./config";
@@ -49,7 +49,7 @@ function App() {
         <MapSettings />
         <ImageOverlay bounds={config.mapContainer.bounds} url={myMap} />
         <BridgeMarkerList checkFinish={checkFinish} />
-        <NearestMarker />
+        {/* <NearestMarker /> */}
       </MapContainer>
     </>
   );

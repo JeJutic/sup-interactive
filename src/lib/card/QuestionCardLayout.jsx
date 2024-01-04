@@ -1,0 +1,16 @@
+import CardLayout from "./CardLayout";
+import styles from "./QuestionCardLayout.module.css";
+import { CardModalContext } from "./CardModal";
+import { useContext } from "react";
+
+function QuestionCardLayout({ children }) {
+  const ctx = useContext(CardModalContext);
+
+  const closeButton = (
+    <div className={styles["close-button"]} onClick={ctx.closeModal}></div>
+  );
+
+  return <CardLayout extra={closeButton}>{children}</CardLayout>;
+}
+
+export default QuestionCardLayout;
