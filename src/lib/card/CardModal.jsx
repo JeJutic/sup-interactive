@@ -1,6 +1,7 @@
 import styles from "./CardModal.module.css";
+import commonStyles from "lib/commons.module.css";
 import "./ModalFlipTransition.css";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Modal from "react-overlays/Modal";
 import { createContext } from "react";
 
@@ -28,8 +29,20 @@ const Fade = ({ children, ...props }) => (
 
 export const CardModalContext = createContext(null);
 
-function CardModal({ showModal, setShowModal, checkFinish, children }) {
+function CardModal({ disableAnimationOnEnter = false, showModal, setShowModal, checkFinish, children }) {
   const [showFront, setShowFront] = useState(true);
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      setIsMounted(false);
+    }
+  }, []);
 
   const closeModal = () => {
     setShowModal(false);
@@ -45,7 +58,7 @@ function CardModal({ showModal, setShowModal, checkFinish, children }) {
       transition={Fade}
     >
       <Fragment>
-        <div className={styles["question-wrapper"]}>
+        <div className={`${styles["question-wrapper"]} ${!disableAnimationOnEnter || isMounted ?  "" : commonStyles.notransition}`}>
           <CSSTransition
             in={showFront}
             timeout={transitionTimeout}

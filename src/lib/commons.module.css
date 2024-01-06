@@ -6,3 +6,10 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
 }
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
