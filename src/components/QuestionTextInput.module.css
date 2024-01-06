@@ -14,7 +14,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 4vmax;
+  font-size: 3.25vmax;
   composes: noselect from "lib/commons.module.css";
 }
 
