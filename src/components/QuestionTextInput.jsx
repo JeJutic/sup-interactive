@@ -89,8 +89,8 @@ function QuestionTextInput({
       sidebar={answerState ? sidebar(images) : undefined}
       customStyles={{
         sidebar: {
-          'min-height': 0
-        }
+          "min-height": 0,
+        },
       }}
     />
   );

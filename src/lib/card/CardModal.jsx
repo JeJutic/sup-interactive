@@ -29,7 +29,13 @@ const Fade = ({ children, ...props }) => (
 
 export const CardModalContext = createContext(null);
 
-function CardModal({ disableAnimationOnEnter = false, showModal, setShowModal, checkFinish, children }) {
+function CardModal({
+  disableAnimationOnEnter = false,
+  showModal,
+  setShowModal,
+  checkFinish,
+  children,
+}) {
   const [showFront, setShowFront] = useState(true);
 
   const [isMounted, setIsMounted] = useState(false);
@@ -41,7 +47,7 @@ function CardModal({ disableAnimationOnEnter = false, showModal, setShowModal, c
   useEffect(() => {
     return () => {
       setIsMounted(false);
-    }
+    };
   }, []);
 
   const closeModal = () => {
@@ -58,7 +64,13 @@ function CardModal({ disableAnimationOnEnter = false, showModal, setShowModal, c
       transition={Fade}
     >
       <Fragment>
-        <div className={`${styles["question-wrapper"]} ${!disableAnimationOnEnter || isMounted ?  "" : commonStyles.notransition}`}>
+        <div
+          className={`${styles["question-wrapper"]} ${
+            !disableAnimationOnEnter || isMounted
+              ? ""
+              : commonStyles.notransition
+          }`}
+        >
           <CSSTransition
             in={showFront}
             timeout={transitionTimeout}

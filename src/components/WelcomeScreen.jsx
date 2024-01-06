@@ -27,7 +27,11 @@ function WelcomeScreen() {
   );
 
   return (
-    <CardModal showModal={showModal} setShowModal={setShowModal} disableAnimationOnEnter={true}>
+    <CardModal
+      showModal={showModal}
+      setShowModal={setShowModal}
+      disableAnimationOnEnter={true}
+    >
       <Card front={<CardLayout>{content}</CardLayout>} opacity={0.9} />
     </CardModal>
   );

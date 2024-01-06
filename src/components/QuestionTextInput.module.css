@@ -55,7 +55,8 @@
   padding-bottom: 1rem;
 }
 
-.sidebar, .sidebar-extra-images {
+.sidebar,
+.sidebar-extra-images {
   gap: 0.5rem;
 }
 
