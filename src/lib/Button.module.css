@@ -7,6 +7,31 @@
   background: #e64614;
   cursor: pointer;
   transition: 200ms;
+  position: relative;
+}
+
+.button::after {
+  content: "";
+  border-top: 0.375rem solid transparent;
+  border-left: 1rem solid #f3c658;
+  border-bottom: 0.375rem solid transparent;
+  border-radius: 20%;
+
+  position: absolute;
+  left: -0.125rem;
+  top: calc(50% - 0.375rem);
+}
+
+.button::before {
+  content: "";
+  border-top: 0.375rem solid transparent;
+  border-right: 1rem solid #f3c658;
+  border-bottom: 0.375rem solid transparent;
+  border-radius: 20%;
+
+  position: absolute;
+  right: -0.125rem;
+  top: calc(50% - 0.375rem);
 }
 
 .button:hover {
