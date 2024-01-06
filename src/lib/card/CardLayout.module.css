@@ -18,12 +18,18 @@
 
 .inner-content {
   flex: 1;
-  width: 95vw;
+  width: 92vw;
   max-width: calc(100vw - 2rem);
   margin: 0 auto;
-  padding-top: 2rem;
+  padding-top: 8vh;
   padding-bottom: 0.5rem;
   height: 100%;
+}
+
+@media (max-width: 480px) {
+  .inner-content {
+    padding-top: 2rem;
+  }
 }
 
 .bottom-img-wrapper {
