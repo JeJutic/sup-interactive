@@ -17,8 +17,8 @@ export const bridges = [
         images={[
           <img alt="" src={q01img1} style={{ objectFit: "cover" }} />,
           [
-            <img alt="" src={q01img2} style={{ objectFit: "contain" }} />,
-            <img alt="" src={q01img3} style={{ objectFit: "contain" }} />,
+            <img alt="" src={q01img2} style={{ objectFit: "cover" }} />,
+            <img alt="" src={q01img3} style={{ objectFit: "cover" }} />,
           ],
         ]}
         showSecondRowImages={true}

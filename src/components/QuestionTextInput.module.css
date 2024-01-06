@@ -64,9 +64,7 @@
   padding-bottom: 1rem;
 }
 
-.sidebar,
-.sidebar-extra-images,
-.sidebar-image {
+.sidebar {
   min-height: 200px;
 }
 
@@ -88,6 +86,11 @@
   height: 100%;
   width: 100%;
   display: block;
+}
+
+.footer {
+  min-height: 1rem;
+  width: 1rem;
 }
 
 @media (max-width: 768px) or (orientation: portrait) {

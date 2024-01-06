@@ -82,6 +82,7 @@ function QuestionTextInput({
         {images[1]}
       </div>
       <Button onClick={ctx.closeModal}>Дальше</Button>
+      <div className={styles["footer"]}></div>
     </div>
   );
 
