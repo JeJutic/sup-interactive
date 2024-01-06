@@ -11,6 +11,9 @@
 
 .content {
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
 }
 
 .form {
@@ -51,6 +54,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-self: normal;
 }
 
 .sidebar {
@@ -61,20 +65,29 @@
 }
 
 .sidebar,
+.sidebar-extra-images,
+.sidebar-image {
+  min-height: 200px;
+}
+
+.sidebar div {
+  min-height: 0;
+}
+
+.sidebar,
 .sidebar-extra-images {
   gap: 0.5rem;
 }
 
-.sidebar > div {
-  min-height: 0;
+.sidebar-extra-images {
+  justify-content: center;
 }
 
-.sidebar-image {
+.sidebar-extra-images img,
+.sidebar img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
   display: block;
-  composes: noselect from "lib/commons.module.css";
 }
 
 @media (max-width: 768px) or (orientation: portrait) {
@@ -86,7 +99,7 @@
     align-items: center;
   }
 
-  .sidebar-extra-images {
+  .sidebar > .sidebar-extra-images {
     display: none;
   }
 
@@ -98,5 +111,9 @@
 @media (min-width: 768px) and (not (orientation: portrait)) {
   .content-wrapper {
     width: 70%;
+  }
+
+  .content > .sidebar-extra-images {
+    display: none;
   }
 }

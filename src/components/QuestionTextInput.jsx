@@ -12,14 +12,8 @@ import { CardModalContext } from "lib/card/CardModal";
 function sidebar(images) {
   return (
     <div className={styles["sidebar"]}>
-      <div>
-        <img alt="" src={images[0]} className={styles["sidebar-image"]} />
-      </div>
-      <div className={styles["sidebar-extra-images"]}>
-        {(images[1] || []).map((i) => (
-          <img alt="" src={i} className={styles["sidebar-image"]} />
-        ))}
-      </div>
+      <div>{images[0]}</div>
+      <div className={styles["sidebar-extra-images"]}>{images[1]}</div>
     </div>
   );
 }
@@ -32,6 +26,7 @@ function QuestionTextInput({
   images,
   hint,
   info,
+  showSecondRowImages = false,
 }) {
   const [answerState, setAnswerState] = useState(false);
   const [answerValue, setAnswerValue] = useState("");
@@ -78,6 +73,14 @@ function QuestionTextInput({
     <div className={styles["content"]}>
       <h2 className={styles["good-subheading"]}>Кстати!</h2>
       <div className={styles["content-info"]}>{info}</div>
+      <div
+        className={styles["sidebar-extra-images"]}
+        style={
+          showSecondRowImages ? { marginBottom: "1rem" } : { display: "none" }
+        }
+      >
+        {images[1]}
+      </div>
       <Button onClick={ctx.closeModal}>Дальше</Button>
     </div>
   );
@@ -94,7 +97,10 @@ function QuestionTextInput({
       sidebar={answerState ? sidebar(images) : undefined}
       customStyles={{
         sidebar: {
-          "min-height": 0,
+          "min-height": "200px",
+        },
+        content: {
+          "min-height": "200px",
         },
       }}
     />

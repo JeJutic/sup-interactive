@@ -14,7 +14,14 @@ export const bridges = [
         title="Задание 1 из 16"
         width="80%"
         rightAnswers={["чижик-пыжик"]}
-        images={[q01img1, [q01img2, q01img3]]}
+        images={[
+          <img alt="" src={q01img1} style={{ objectFit: "cover" }} />,
+          [
+            <img alt="" src={q01img2} style={{ objectFit: "contain" }} />,
+            <img alt="" src={q01img3} style={{ objectFit: "contain" }} />,
+          ],
+        ]}
+        showSecondRowImages={true}
         hint="…, где ты был? На Фонтанке водку…"
         info={
           <>
