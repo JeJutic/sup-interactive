@@ -4,7 +4,15 @@
   justify-content: space-evenly;
 }
 
+.heading {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   composes: noselect from "lib/commons.module.css";
 }
 

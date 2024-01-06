@@ -9,6 +9,7 @@ import ContentGridLayout from "lib/card/ContentGridLayout";
 import FancyHeader from "lib/FancyHeader";
 import Button from "lib/Button";
 import { CardModalContext } from "lib/card/CardModal";
+import CardHint from "./CardHint";
 
 function QuestionTextInput({
   title,
@@ -49,7 +50,12 @@ function QuestionTextInput({
   const front = (
     <QuestionCardLayout>
       <ContentGridLayout
-        title={<FancyHeader className={styles["title"]} text={title} />}
+        title={
+          <div className={styles["heading"]}>
+            <FancyHeader className={styles["title"]} text={title} />
+            <CardHint hint={hint} />
+          </div>
+        }
         content={content}
       />
     </QuestionCardLayout>
