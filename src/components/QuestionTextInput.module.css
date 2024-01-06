@@ -4,6 +4,11 @@
   justify-content: space-evenly;
 }
 
+.title,
+.good-subheading {
+  composes: noselect from "lib/commons.module.css";
+}
+
 .content {
   margin-top: 1rem;
 }
@@ -69,6 +74,7 @@
   width: 100%;
   object-fit: cover;
   display: block;
+  composes: noselect from "lib/commons.module.css";
 }
 
 @media (max-width: 768px) or (orientation: portrait) {

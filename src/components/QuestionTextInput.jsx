@@ -62,7 +62,7 @@ function QuestionTextInput({
   const front = (
     <QuestionCardLayout>
       <ContentGridLayout
-        title={<FancyHeader text={title} />}
+        title={<FancyHeader className={styles["title"]} text={title} />}
         content={content}
       />
     </QuestionCardLayout>
@@ -84,7 +84,12 @@ function QuestionTextInput({
 
   const backCard = (
     <ContentGridLayout
-      title={<FancyHeader text={answerState ? "Верно!" : title} />}
+      title={
+        <FancyHeader
+          className={styles["title"]}
+          text={answerState ? "Верно!" : title}
+        />
+      }
       content={answerState ? goodAnswerBackContent : wrongAnswerBackContent}
       sidebar={answerState ? sidebar(images) : undefined}
       customStyles={{
