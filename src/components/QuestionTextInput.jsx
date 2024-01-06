@@ -3,20 +3,12 @@ import { useState, useContext } from "react";
 import styles from "./QuestionTextInput.module.css";
 
 import Card from "lib/card/Card";
+import QuestionBackCard from "./QuestionBackCard";
 import QuestionCardLayout from "lib/card/QuestionCardLayout";
 import ContentGridLayout from "lib/card/ContentGridLayout";
 import FancyHeader from "lib/FancyHeader";
 import Button from "lib/Button";
 import { CardModalContext } from "lib/card/CardModal";
-
-function sidebar(images) {
-  return (
-    <div className={styles["sidebar"]}>
-      <div>{images[0]}</div>
-      <div className={styles["sidebar-extra-images"]}>{images[1]}</div>
-    </div>
-  );
-}
 
 function QuestionTextInput({
   title,
@@ -63,54 +55,18 @@ function QuestionTextInput({
     </QuestionCardLayout>
   );
 
-  const wrongAnswerBackContent = (
-    <div className={styles["content"]} onClick={ctx.flip}>
-      Неверно! Попробуйте ещё раз или воспользуйтесь подсказкой!
-    </div>
-  );
-
-  const goodAnswerBackContent = (
-    <div className={styles["content"]}>
-      <h2 className={styles["good-subheading"]}>Кстати!</h2>
-      <div className={styles["content-info"]}>{info}</div>
-      <div
-        className={styles["sidebar-extra-images"]}
-        style={
-          showSecondRowImages ? { marginBottom: "1rem" } : { display: "none" }
-        }
-      >
-        {images[1]}
-      </div>
-      <Button onClick={ctx.closeModal}>Дальше</Button>
-      <div className={styles["footer"]}></div>
-    </div>
-  );
-
-  const backCard = (
-    <ContentGridLayout
-      title={
-        <FancyHeader
-          className={styles["title"]}
-          text={answerState ? "Верно!" : title}
-        />
-      }
-      content={answerState ? goodAnswerBackContent : wrongAnswerBackContent}
-      sidebar={answerState ? sidebar(images) : undefined}
-      customStyles={{
-        sidebar: {
-          "min-height": "200px",
-        },
-        content: {
-          "min-height": "200px",
-        },
-      }}
-    />
-  );
-
   return (
     <Card
       front={front}
-      back={<QuestionCardLayout>{backCard}</QuestionCardLayout>}
+      back={
+        <QuestionBackCard
+          info={info}
+          showSecondRowImages={showSecondRowImages}
+          images={images}
+          answerState={answerState}
+          title={title}
+        />
+      }
     />
   );
 }
