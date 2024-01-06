@@ -87,6 +87,11 @@ function QuestionTextInput({
       title={<FancyHeader text={answerState ? "Верно!" : title} />}
       content={answerState ? goodAnswerBackContent : wrongAnswerBackContent}
       sidebar={answerState ? sidebar(images) : undefined}
+      customStyles={{
+        sidebar: {
+          'min-height': 0
+        }
+      }}
     />
   );
 

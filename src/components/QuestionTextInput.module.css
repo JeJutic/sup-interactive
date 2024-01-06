@@ -48,13 +48,29 @@
   justify-content: space-between;
 }
 
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.sidebar, .sidebar-extra-images {
+  gap: 0.5rem;
+}
+
+.sidebar > div {
+  min-height: 0;
+}
+
 .sidebar-image {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) or (orientation: portrait) {
   .content-wrapper {
     margin-top: 2rem;
   }
@@ -68,11 +84,11 @@
   }
 
   .sidebar {
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (not (orientation: portrait)) {
   .content-wrapper {
     width: 70%;
   }
