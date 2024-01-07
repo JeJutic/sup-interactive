@@ -14,11 +14,11 @@ const config = {
     attributionControl: false,
     maxBoundsViscosity: 1.0,
     bounceAtZoomLimits: false,
-    minZoom: 14,
+    minZoom: 13.5,
     maxZoom: 15,
     maxBounds: bounds,
   },
-  smallLabelZoomThreshold: 14.5,
+  smallLabelZoomThreshold: 14,
 };
 
 export default config;
