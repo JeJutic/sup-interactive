@@ -23,7 +23,7 @@ function QuestionTextInput({
   const ctx = useContext(CardModalContext);
 
   const checkAnswer = () => {
-    const good = rightAnswers.includes(answerValue);
+    const good = rightAnswers.includes(answerValue.trim());
 
     if (good) {
       localStorage.setItem(id, true);
