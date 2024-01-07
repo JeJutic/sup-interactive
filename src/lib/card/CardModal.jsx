@@ -3,7 +3,7 @@ import commonStyles from "lib/commons.module.css";
 import "./ModalFlipTransition.css";
 import React, { Fragment, useState, useEffect } from "react";
 import Modal from "react-overlays/Modal";
-import { createContext } from "react";
+import { createContext, useRef } from "react";
 
 import { CSSTransition, Transition } from "react-transition-group";
 
@@ -36,6 +36,8 @@ function CardModal({
   checkFinish,
   children,
 }) {
+  const questionRef = useRef(null);
+
   const [showFront, setShowFront] = useState(true);
 
   const [isMounted, setIsMounted] = useState(false);
@@ -53,7 +55,6 @@ function CardModal({
   const closeModal = () => {
     setShowModal(false);
     setTimeout(() => setShowFront(true), transitionTimeout);
-    checkFinish();
   };
 
   return (
@@ -78,11 +79,18 @@ function CardModal({
           >
             <CardModalContext.Provider
               value={{
-                flip: () => setShowFront((v) => !v),
+                flip: (enableAnimation = true) => {
+                  if (!enableAnimation && questionRef.current) {
+                    questionRef.current.classList.add(styles["notransition"]);
+                  }
+                  setShowFront((v) => !v);
+                },
                 closeModal: closeModal,
               }}
             >
-              <div className={styles["question"]}>{children}</div>
+              <div className={styles["question"]} ref={questionRef}>
+                {children}
+              </div>
             </CardModalContext.Provider>
           </CSSTransition>
         </div>

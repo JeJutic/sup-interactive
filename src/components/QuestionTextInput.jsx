@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 
 import styles from "./QuestionTextInput.module.css";
 
@@ -13,22 +13,30 @@ import CardHint from "./CardHint";
 
 function QuestionTextInput({
   title,
+  id,
   children,
   rightAnswers,
-  width,
   images,
   hint,
   info,
   showSecondRowImages = false,
 }) {
-  const [answerState, setAnswerState] = useState(false);
+  const alreadySolved = !!localStorage.getItem(id);
+  const [answerState, setAnswerState] = useState(alreadySolved);
   const [answerValue, setAnswerValue] = useState("");
+
+  useEffect(() => {
+    if (answerState) {
+      localStorage.setItem(id, true);
+      ctx.flip(!alreadySolved);
+    }
+  }, [answerState]);
 
   const ctx = useContext(CardModalContext);
 
   const checkAnswer = () => {
-    setAnswerState(rightAnswers.includes(answerValue));
-    ctx.flip();
+    const good = rightAnswers.includes(answerValue);
+    setAnswerState(good);
   };
 
   const content = (

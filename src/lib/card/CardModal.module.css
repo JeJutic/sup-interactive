@@ -45,3 +45,10 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1001;
 }
+
+.notransition > div {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}

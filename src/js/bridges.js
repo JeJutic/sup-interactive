@@ -11,6 +11,7 @@ export const bridges = [
     position: [59.941065, 30.334762],
     overlayComponent: (
       <QuestionTextInput
+        id={JSON.stringify([59.941065, 30.334762])}
         title="Задание 1 из 16"
         width="80%"
         rightAnswers={["чижик-пыжик"]}
