@@ -1,0 +1,13 @@
+.heading {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 3.25vmax;
+  composes: noselect from "lib/commons.module.css";
+}
