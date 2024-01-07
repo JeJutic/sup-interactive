@@ -5,8 +5,8 @@
   box-shadow: 0 18px 48px 26px rgba(0, 0, 0, 0.15);
   background-color: var(--primary-color);
   color: var(--fc-light);
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .content {
@@ -35,6 +35,8 @@
 .bottom-img-wrapper {
   width: 100%;
   overflow: clip;
+  flex: 1;
+  min-height: 0;
   composes: noselect from "lib/commons.module.css";
 }
 
