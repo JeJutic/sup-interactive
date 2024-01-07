@@ -1,5 +1,5 @@
 body {
-  font-size: max(1.3vmax, 14pt);
+  font-size: max(1.15vmax, 12pt);
 }
 .map {
   position: fixed;
