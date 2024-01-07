@@ -62,10 +62,10 @@ function QuestionBackCard({
         sidebar={answerState ? sidebar(images) : undefined}
         customStyles={{
           sidebar: {
-            "min-height": "200px",
+            minHeight: "200px",
           },
           content: {
-            "min-height": "200px",
+            minHeight: "200px",
           },
         }}
       />
