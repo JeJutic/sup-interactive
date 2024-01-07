@@ -26,17 +26,21 @@ function QuestionTextInput({
   const [answerValue, setAnswerValue] = useState("");
 
   useEffect(() => {
-    if (answerState) {
-      localStorage.setItem(id, true);
-      ctx.flip(!alreadySolved);
+    if (alreadySolved) {
+      ctx.flip(false);
     }
-  }, [answerState]);
+  }, []);
 
   const ctx = useContext(CardModalContext);
 
   const checkAnswer = () => {
     const good = rightAnswers.includes(answerValue);
-    setAnswerState(good);
+
+    if (good) {
+      localStorage.setItem(id, true);
+      setAnswerState(true);
+    }
+    ctx.flip();
   };
 
   const content = (
