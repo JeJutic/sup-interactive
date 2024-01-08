@@ -3,22 +3,56 @@ import React from "react";
 import QuestionTextInput from "components/QuestionTextInput";
 import QuestionLayout from "components/QuestionLayout";
 
-import q01img1 from "img/questions/01/01.jpg";
-import q01img2 from "img/questions/01/02.jpg";
-import q01img3 from "img/questions/01/03.jpg";
+import q02img1 from "img/questions/02/1.jpg";
+import q02img2 from "img/questions/02/2.jpg";
+import q02img3 from "img/questions/02/3.jpg";
+
+import q01img1 from "img/questions/01/1.jpg";
+import q01img2 from "img/questions/01/2.jpg";
+
+import Question1 from "components/Question1";
 
 export const bridges = [
+  {
+    position: [59.941041, 30.334754],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.941041, 30.334754])}
+        title="Задание 1 из 16"
+        images={[
+          <img alt="" src={q01img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q01img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        hint="2 насаждения относятся к одному замку, но носят 2 разных его названия"
+        info={
+          <>
+            <p>
+              В 1906 во время работ по разборке пролета старого моста произошел
+              инцидент: один из десятников распорядился прорубить верхнюю часть
+              свода поперек, вместо того, чтобы разбирать его продольными
+              полосами. Из-за этого произошел обвал кирпичного свода, в
+              результате 40 рабочих, которые находились на мосту свалились в
+              воду; за исключением трех утонувших, все были спасены.
+            </p>
+          </>
+        }
+      >
+        <Question1 />
+      </QuestionLayout>
+    ),
+  },
   {
     position: [59.941686, 30.337329],
     overlayComponent: (
       <QuestionLayout
         id={JSON.stringify([59.941686, 30.337329])}
-        title="Задание 1 из 16"
+        title="Задание 2 из 16"
         images={[
-          <img alt="" src={q01img1} style={{ objectFit: "cover" }} />,
+          <img alt="" src={q02img1} style={{ objectFit: "cover" }} />,
           [
-            <img alt="" src={q01img2} style={{ objectFit: "cover" }} />,
-            <img alt="" src={q01img3} style={{ objectFit: "cover" }} />,
+            <img alt="" src={q02img2} style={{ objectFit: "cover" }} />,
+            <img alt="" src={q02img3} style={{ objectFit: "cover" }} />,
           ],
         ]}
         showSecondRowImages={true}
@@ -40,9 +74,10 @@ export const bridges = [
           </>
         }
       >
-        <div>
-          Неподалёку от моста в 1835 году находилось Императорское училище
-          правоведения. Воспитанники училища носили мундиры зелёного цвета с
+        <QuestionTextInput rightAnswers={["чижик-пыжик"]}>
+          <div>
+            Неподалёку от моста в 1835 году находилось Императорское училище
+            правоведения. Воспитанники училища носили мундиры зелёного цвета с
             желтыми петлицами, которые напоминали оттенок оперения птицы, а
             зимой — особые шапки. В свободное время студенты тайно посещали
             расположенный недалеко трактир, а после шли гулять по набережной и
@@ -51,6 +86,7 @@ export const bridges = [
             песенку. Какое это было прозвище?
           </div>
         </QuestionTextInput>
+      </QuestionLayout>
     ),
   },
 ];
