@@ -3,14 +3,17 @@ import React from "react";
 import QuestionTextInput from "components/QuestionTextInput";
 import QuestionLayout from "components/QuestionLayout";
 
+import Question1 from "components/Question1";
+import q01img1 from "img/questions/01/1.jpg";
+import q01img2 from "img/questions/01/2.jpg";
+
 import q02img1 from "img/questions/02/1.jpg";
 import q02img2 from "img/questions/02/2.jpg";
 import q02img3 from "img/questions/02/3.jpg";
 
-import q01img1 from "img/questions/01/1.jpg";
-import q01img2 from "img/questions/01/2.jpg";
-
-import Question1 from "components/Question1";
+import Question6 from "components/Question6";
+import q06img1 from "img/questions/06/1.jpg";
+import q06img2 from "img/questions/06/2.jpg";
 
 export const bridges = [
   {
@@ -86,6 +89,37 @@ export const bridges = [
             песенку. Какое это было прозвище?
           </div>
         </QuestionTextInput>
+      </QuestionLayout>
+    ),
+  },
+  {
+    position: [59.919194, 30.307245],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.919194, 30.307245])}
+        title="Задание 6 из 16"
+        images={[
+          <img alt="" src={q06img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q06img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        hint="Емельян Пугачев — оппозиционер власти"
+        info={
+          <>
+            <p>
+              Первые гвардейские полки, Семеновский и Преображенский, появились
+              при Петре I и считались элитой привилегированной армией,
+              защищавшей верхушку власти. Измайловский полк, сформированный при
+              Анне Иоанновне, просуществовал с 1730 по 1918 годы.
+            </p>
+            <p>
+              Великий полководец А. В. Суворов уже в свои 12 лет был зачислен в
+              Семеновский гвардейский полк.
+            </p>
+          </>
+        }
+      >
+        <Question6 />
       </QuestionLayout>
     ),
   },
