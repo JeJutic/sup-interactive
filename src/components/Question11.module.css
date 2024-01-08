@@ -1,0 +1,45 @@
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.buttons > * {
+  max-width: 600px;
+
+  background: transparent;
+}
+
+.content-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.toggled,
+.toggled:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+.content-wrapper > * + * {
+  margin-block-start: 1.5rem;
+}
+
+.submit-button {
+  align-self: center;
+}
+
+.filled {
+  border-bottom: 1px solid white;
+  min-width: 5ch;
+  display: inline-block;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (not (orientation: portrait)) {
+  .content-wrapper {
+    width: 70%;
+  }
+}

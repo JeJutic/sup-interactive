@@ -1,5 +1,7 @@
 import React from "react";
 
+import commonStyles from "lib/commons.module.css";
+
 import QuestionTextInput from "components/QuestionTextInput";
 import QuestionLayout from "components/QuestionLayout";
 
@@ -14,6 +16,10 @@ import q02img3 from "img/questions/02/3.jpg";
 import Question6 from "components/Question6";
 import q06img1 from "img/questions/06/1.jpg";
 import q06img2 from "img/questions/06/2.jpg";
+
+import Question11 from "components/Question11";
+import q11img1 from "img/questions/11/1.jpg";
+import q11img2 from "img/questions/11/2.jpg";
 
 import Question12 from "components/Question12";
 import q12img1 from "img/questions/12/1.jpg";
@@ -124,6 +130,39 @@ export const bridges = [
         }
       >
         <Question6 />
+      </QuestionLayout>
+    ),
+  },
+  {
+    position: [59.932124, 30.324229],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.932124, 30.324229])}
+        title="Задание 11 из 13"
+        images={[
+          <img alt="" src={q11img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q11img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        hint="обладательница записки довольно бескорыстна"
+        info={
+          <div className={commonStyles["paragraph"]}>
+            <p>Другие записки:</p>
+            <p>«Силы духа, хлеба, свободы, независимости»</p>
+            <p>
+              «Хочу срочнейше мужчину, который будет меня уважать, любить,
+              содержать»
+            </p>
+            <p>
+              «Хочу с Наташей прожить всю жизнь, иметь много деток, здоровых и
+              счастливых. Чтобы в семье была любовь и радость. Здоровья моим
+              родителям и ее родителям. Счастья тебе, грифон!»
+            </p>
+            <p>«Лёва, хочу тачку Шевроле Трейлблейзер»</p>
+          </div>
+        }
+      >
+        <Question11 />
       </QuestionLayout>
     ),
   },
