@@ -1,0 +1,44 @@
+.buttons {
+  --btn-max-width: 400px;
+
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: calc(2 * var(--btn-max-width) + 1rem);
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.buttons > * {
+  flex-grow: 1;
+  flex-basis: 280px;
+  max-width: var(--btn-max-width);
+
+  background: transparent;
+}
+
+.content-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.toggled,
+.toggled:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+.content-wrapper > * + * {
+  margin-block-start: 1.5rem;
+}
+
+.submit-button {
+  align-self: center;
+}
+
+@media (min-width: 768px) and (not (orientation: portrait)) {
+  .content-wrapper {
+    width: 70%;
+  }
+}
