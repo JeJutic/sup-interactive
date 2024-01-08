@@ -25,7 +25,7 @@ export const bridges = [
     overlayComponent: (
       <QuestionLayout
         id={JSON.stringify([59.941041, 30.334754])}
-        title="Задание 1 из 16"
+        title="Задание 1 из 13"
         images={[
           <img alt="" src={q01img1} style={{ objectFit: "cover" }} />,
           [<img alt="" src={q01img2} style={{ objectFit: "cover" }} />],
@@ -54,7 +54,7 @@ export const bridges = [
     overlayComponent: (
       <QuestionLayout
         id={JSON.stringify([59.941686, 30.337329])}
-        title="Задание 2 из 16"
+        title="Задание 2 из 13"
         images={[
           <img alt="" src={q02img1} style={{ objectFit: "cover" }} />,
           [
@@ -101,7 +101,7 @@ export const bridges = [
     overlayComponent: (
       <QuestionLayout
         id={JSON.stringify([59.919194, 30.307245])}
-        title="Задание 6 из 16"
+        title="Задание 6 из 13"
         images={[
           <img alt="" src={q06img1} style={{ objectFit: "cover" }} />,
           [<img alt="" src={q06img2} style={{ objectFit: "cover" }} />],
