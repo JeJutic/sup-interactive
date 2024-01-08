@@ -15,6 +15,10 @@ import Question6 from "components/Question6";
 import q06img1 from "img/questions/06/1.jpg";
 import q06img2 from "img/questions/06/2.jpg";
 
+import Question12 from "components/Question12";
+import q12img1 from "img/questions/12/1.jpg";
+import q12img2 from "img/questions/12/2.jpg";
+
 export const bridges = [
   {
     position: [59.941041, 30.334754],
@@ -120,6 +124,36 @@ export const bridges = [
         }
       >
         <Question6 />
+      </QuestionLayout>
+    ),
+  },
+  {
+    position: [59.936849, 30.326428],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.936849, 30.326428])}
+        title="Задание 12 из 13"
+        images={[
+          <img alt="" src={q12img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q12img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        hint="49 рублей"
+        info={
+          <>
+            <p>
+              В 1894 году инженер Л. Н. Колпицын попросил разрешения у городской
+              думы построить мосты через Грибоедов канал на собственные средства
+              и в течении 10 лет брать за проход по мосту по 1 копейке с
+              человека. После истечения срока мосты передавались бы в
+              собственность города. Но инженеру отказали. Спустя 2 года Колпицын
+              всё же построил свои деньги (3500 рублей) первую деревянную версию
+              Итальянского моста.
+            </p>
+          </>
+        }
+      >
+        <Question12 />
       </QuestionLayout>
     ),
   },
