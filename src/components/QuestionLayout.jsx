@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useState, useEffect, useContext, createContext } from "react";
 
 import styles from "./QuestionLayout.module.css";
 
@@ -10,11 +10,12 @@ import FancyHeader from "lib/FancyHeader";
 import { CardModalContext } from "lib/card/CardModal";
 import CardHint from "./CardHint";
 
-function QuestionLayout({
+export const QuestionLayoutContext = createContext(null);
+
+export function QuestionLayout({
   title,
   id,
   children,
-  answerState,
   images,
   hint,
   info,
@@ -28,6 +29,18 @@ function QuestionLayout({
       ctx.flip(false);
     }
   }, []);
+
+  const [answerState, setAnswerState] = useState(alreadySolved);
+
+  const checkAnswerOnClick = (checkAnswer) => {
+    const good = checkAnswer();
+    console.log(good);
+    if (good) {
+      localStorage.setItem(id, true);
+      setAnswerState(true);
+    }
+    ctx.flip();
+  };
 
   const front = (
     <QuestionCardLayout>
@@ -44,18 +57,20 @@ function QuestionLayout({
   );
 
   return (
-    <Card
-      front={front}
-      back={
-        <QuestionBackCard
-          info={info}
-          showSecondRowImages={showSecondRowImages}
-          images={images}
-          answerState={answerState}
-          title={title}
-        />
-      }
-    />
+    <QuestionLayoutContext.Provider value={checkAnswerOnClick}>
+      <Card
+        front={front}
+        back={
+          <QuestionBackCard
+            info={info}
+            showSecondRowImages={showSecondRowImages}
+            images={images}
+            answerState={answerState}
+            title={title}
+          />
+        }
+      />
+    </QuestionLayoutContext.Provider>
   );
 }
 
