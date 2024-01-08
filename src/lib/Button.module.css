@@ -4,7 +4,7 @@
   border: 2px solid #f3c658;
   color: white;
   box-shadow: 0px 2px 2px 0px #00000040 inset;
-  background: #e64614;
+  background: var(--accent-color);
   cursor: pointer;
   transition: 200ms;
   position: relative;
@@ -35,7 +35,9 @@
   top: calc(50% - 0.375rem);
 }
 
-.button:hover {
-  background: white;
-  color: #0066cc;
+@media (hover: hover) {
+  .button:hover {
+    background: white;
+    color: #0066cc;
+  }
 }
