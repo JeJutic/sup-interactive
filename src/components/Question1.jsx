@@ -44,7 +44,7 @@ function Question1() {
         {options.map((content, idx) => {
           return (
             <Button key={idx} onClick={choice.onClick(idx)}>
-              {content}
+              {content[0]}
             </Button>
           );
         })}
