@@ -27,7 +27,7 @@ function QuestionBackCard({
   const ctx = useContext(CardModalContext);
 
   const wrongAnswerBackContent = (
-    <div className={styles["content"]} onClick={ctx.flip}>
+    <div className={styles["content"]}>
       Неверно! Попробуйте ещё раз или воспользуйтесь подсказкой!
     </div>
   );
@@ -50,7 +50,7 @@ function QuestionBackCard({
   );
 
   return (
-    <QuestionCardLayout>
+    <QuestionCardLayout onClick={answerState ? undefined : ctx.flip}>
       <ContentGridLayout
         title={
           <FancyHeader
