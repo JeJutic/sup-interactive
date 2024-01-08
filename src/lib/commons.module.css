@@ -13,3 +13,7 @@
   -o-transition: none !important;
   transition: none !important;
 }
+
+.paragraph > * + * {
+  margin-block-start: 1.5rem;
+}
