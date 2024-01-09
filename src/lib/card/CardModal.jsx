@@ -55,7 +55,7 @@ function CardModal({
   const closeModal = () => {
     setShowModal(false);
     setTimeout(() => setShowFront(true), transitionTimeout);
-    onQuestionSolved();
+    onQuestionSolved && onQuestionSolved();
   };
 
   return (
