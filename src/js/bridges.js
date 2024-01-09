@@ -46,6 +46,9 @@ import Question12 from "components/Question12";
 import q12img1 from "img/questions/12/1.jpg";
 import q12img2 from "img/questions/12/2.jpg";
 
+import q13img1 from "img/questions/13/1.jpg";
+import q13img2 from "img/questions/13/2.jpg";
+
 export const bridges = [
   {
     position: [59.941041, 30.334754],
@@ -422,6 +425,50 @@ export const bridges = [
         }
       >
         <Question12 />
+      </QuestionLayout>
+    ),
+  },
+  {
+    position: [59.9416, 30.328145],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.9416, 30.328145])}
+        title="Задание 13 из 13"
+        images={[
+          <img alt="" src={q13img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q13img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        hint="Этот правитель отменил Крепостное право"
+        info={
+          <p>
+            После смерти Александра Второго Российская Империя сошла с дороги
+            либеральных преобразований, что окончательно активизировало
+            революционные силы. Если бы не убийство правителя, мы бы до сих пор
+            могли жить с монархом во главе государства, а СССР и вовсе могло не
+            быть… Но это лишь теории историков.
+          </p>
+        }
+      >
+        <QuestionTextInput
+          rightAnswers={["александр второй", "александр 2", "александр ii"]}
+        >
+          <div
+            className={`${commonStyles["shrinked-paragraph"]} ${commonStyles["paragraph"]}`}
+          >
+            <p>
+              История Тройного моста связана с убийством одного из русских
+              правителей. Прочитайте краткое описание события и скажите, о ком
+              идёт речь? (Запишите ответ в виде: Иван Пятый или Борис Ельцин)
+            </p>
+            <p>
+              «Кортеж с «правителем» повернул с Инженерной улицы на набережную,
+              направляюсь к Тройному мосту, когда террористы бросили бомбу в
+              первый раз, «правитель» не пострадал. Во второй раз бомба попала
+              прямо под ноги «правителю». Вскоре «правитель скончался».»
+            </p>
+          </div>
+        </QuestionTextInput>
       </QuestionLayout>
     ),
   },
