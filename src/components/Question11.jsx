@@ -52,11 +52,11 @@ function Question11() {
         слова должны стоять на месте пропусков в следующей записке:
       </p>
       <p>
-        «Найти себе <span class={styles["filled"]}>{fillState[0]}</span> в{" "}
-        <span class={styles["filled"]}>{fillState[1]}</span>, который будет{" "}
-        <span class={styles["filled"]}>{fillState[2]}</span>, не даст упасть
+        «Найти себе <span className={styles["filled"]}>{fillState[0]}</span> в{" "}
+        <span className={styles["filled"]}>{fillState[1]}</span>, который будет{" "}
+        <span className={styles["filled"]}>{fillState[2]}</span>, не даст упасть
         духом, впасть в зимнюю депрессию и поможет{" "}
-        <span class={styles["filled"]}>{fillState[3]}</span>».
+        <span className={styles["filled"]}>{fillState[3]}</span>».
       </p>
       <div className={styles["buttons"]}>
         {options.map((content, idx) => {
