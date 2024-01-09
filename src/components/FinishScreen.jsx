@@ -18,17 +18,14 @@ function FinishScreen() {
         </div>
       </div>
       <div className={styles.description}>
-      Поздравляем, вы ответили на все вопросы!
+        Поздравляем, вы ответили на все вопросы!
       </div>
       <Button onClick={() => setShowModal(false)}>Вернуться на главную</Button>
     </div>
   );
 
   return (
-    <CardModal
-      showModal={showModal}
-      setShowModal={setShowModal}
-    >
+    <CardModal showModal={showModal} setShowModal={setShowModal}>
       <Card front={<CardLayout>{content}</CardLayout>} opacity={0.9} />
     </CardModal>
   );
