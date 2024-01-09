@@ -34,6 +34,10 @@ import q07img2 from "img/questions/07/2.jpg";
 import q08img1 from "img/questions/08/1.jpg";
 import q08img2 from "img/questions/08/2.jpg";
 
+import Question10 from "components/Question10";
+import q10img1 from "img/questions/10/1.jpg";
+import q10img2 from "img/questions/10/2.jpg";
+
 import Question11 from "components/Question11";
 import q11img1 from "img/questions/11/1.jpg";
 import q11img2 from "img/questions/11/2.jpg";
@@ -312,6 +316,48 @@ export const bridges = [
               Вот кто наши суровые знатоки и судьи!»
             </p>
           </div>
+        </QuestionTextInput>
+      </QuestionLayout>
+    ),
+  },
+  {
+    position: [59.925786, 30.313339],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.925786, 30.313339])}
+        title="Задание 10 из 13"
+        images={[
+          <img alt="" src={q10img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q10img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={true}
+        hint="Главные герои произведений: Е. О. и Р. Р."
+        info={
+          <div className={commonStyles["paragraph"]}>
+            <p>
+              Роман Ф.М. Достоевского «Преступление и Наказание» начинается со
+              слов: «В начале июля, в чрезвычайно жаркое время, под вечер, один
+              молодой человек вышел из своей каморки, …на улицу и медленно, как
+              бы в нерешимости, отправился к К-ну мосту».
+            </p>
+            <p>
+              Эпиграмма А. С. Пушкина 1829 года на иллюстрацию А. В. Нотбека к
+              отрывку из романа «Евгений Онегин»:
+            </p>
+            <p>
+              Вот перешед чрез мост Кокушкин, <br />
+              Опершись жо*ой о гранит,
+              <br />
+              Сам Александр Сергеич Пушкин
+              <br />С мосье Онегиным стоит…
+            </p>
+          </div>
+        }
+      >
+        <QuestionTextInput
+          rightAnswers={["онегин раскольников", "раскольников онегин"]}
+        >
+          <Question10 />
         </QuestionTextInput>
       </QuestionLayout>
     ),
