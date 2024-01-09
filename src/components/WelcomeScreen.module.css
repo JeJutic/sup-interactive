@@ -18,8 +18,14 @@
   margin-top: 1rem;
 }
 
+.header > * + * {
+  margin-block-start: 1.5rem;
+}
+
 .subheading {
-  margin-top: 1rem;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
   font-size: min(5vw, 1.728rem);
 }
 
