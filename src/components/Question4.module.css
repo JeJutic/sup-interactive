@@ -1,0 +1,97 @@
+.content-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  composes: paragraph from "lib/commons.module.css";
+}
+
+.content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content img {
+  object-fit: cover;
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .content img {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .content > p {
+    width: 70%;
+  }
+}
+
+.images-block {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+}
+
+.images-block2 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  justify-items: center;
+}
+
+.image-block {
+  display: flex;
+  gap: 0;
+}
+
+.image-block img {
+  min-height: 90px;
+  min-width: 90px;
+  max-width: 144px;
+  max-height: 144px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.image-block {
+  padding: 0;
+  background: transparent;
+  border: none;
+  aspect-ratio: 1 / 1;
+  width: fit-content;
+  height: fit-content;
+}
+
+.image-block::before,
+.image-block::after {
+  display: none;
+}
+
+.toggled {
+  position: relative;
+  background: transparent;
+  filter: opacity(0.3) drop-shadow(0 0 0 var(--accent-color))
+    drop-shadow(0 0 0 var(--accent-color))
+    drop-shadow(0 0 0 var(--accent-color));
+}
+
+.submit-button {
+  align-self: start;
+}
+
+@media (hover: hover) {
+  .image-block:hover,
+  .toggled:hover,
+  .toggled {
+    background: transparent;
+    filter: opacity(0.3) drop-shadow(0 0 0 var(--accent-color))
+      drop-shadow(0 0 0 var(--accent-color))
+      drop-shadow(0 0 0 var(--accent-color));
+  }
+}

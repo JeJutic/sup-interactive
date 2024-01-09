@@ -17,6 +17,10 @@ import Question3 from "components/Question3";
 import q03img1 from "img/questions/03/1.jpg";
 import q03img2 from "img/questions/03/2.jpg";
 
+import Question4 from "components/Question4";
+import q04img1 from "img/questions/04/1.jpg";
+import q04img2 from "img/questions/04/2.jpg";
+
 import Question6 from "components/Question6";
 import q06img1 from "img/questions/06/1.jpg";
 import q06img2 from "img/questions/06/2.jpg";
@@ -131,6 +135,34 @@ export const bridges = [
         <QuestionTextInput rightAnswers={["4213"]}>
           <Question3 />
         </QuestionTextInput>
+      </QuestionLayout>
+    ),
+  },
+  {
+    position: [59.928377, 30.335022],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.928377, 30.335022])}
+        title="Задание 4 из 13"
+        images={[
+          <img alt="" src={q04img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q04img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        hint="3 животных, одно из них с перепончатыми лапками"
+        info={
+          <>
+            <p>
+              Откуда на мосту появились массивные цепи? До 1859 года мост был
+              разводным. Центральный пролёт был деревянным и поднимался за счет
+              механизмов с цепями в гранитных башнях. Позже судоходство по реке
+              Фонтанке сошло на нет, деревянный участок сделали постоянным, а
+              цепи оставили как декор моста.
+            </p>
+          </>
+        }
+      >
+        <Question4 />
       </QuestionLayout>
     ),
   },
