@@ -326,9 +326,7 @@ export const bridges = [
   },
   {
     position: [59.926732, 30.300969],
-    overlayComponent: (
-      <Question9 />
-    )
+    overlayComponent: <Question9 />,
   },
   {
     position: [59.925786, 30.313339],
