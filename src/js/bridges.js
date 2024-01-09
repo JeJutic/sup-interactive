@@ -28,6 +28,9 @@ import Question6 from "components/Question6";
 import q06img1 from "img/questions/06/1.jpg";
 import q06img2 from "img/questions/06/2.jpg";
 
+import q07img1 from "img/questions/07/1.jpg";
+import q07img2 from "img/questions/07/2.jpg";
+
 import Question11 from "components/Question11";
 import q11img1 from "img/questions/11/1.jpg";
 import q11img2 from "img/questions/11/2.jpg";
@@ -232,6 +235,40 @@ export const bridges = [
         }
       >
         <Question6 />
+      </QuestionLayout>
+    ),
+  },
+  {
+    position: [59.920624, 30.297782],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.920624, 30.297782])}
+        title="Задание 7 из 13"
+        images={[
+          <img alt="" src={q07img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q07img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        hint="Находится в центре композиции"
+        info={
+          <>
+            <p>
+              Когда одному из мостов семимостья, Старо-Никольскому, понадобилась
+              замена опор, работы по их перекладке производились в сухом
+              котловане — русло канала перегораживали деревянными перемычками и
+              посредством насосов откачивали воду.
+            </p>
+          </>
+        }
+      >
+        <QuestionTextInput rightAnswers={["пикалов"]}>
+          <div className={commonStyles["shrinked-paragraph"]}>
+            Семимостье представляет собой ансамбль из семи мостов. Но есть
+            только одна точка на определенном месте, откуда видно все семь
+            переправ. Взгляните на карту и определите, что это за мост?
+            (запишите в формате: дворцовый)
+          </div>
+        </QuestionTextInput>
       </QuestionLayout>
     ),
   },
