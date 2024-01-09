@@ -17,10 +17,11 @@ function App() {
   const [showFinishScreen, setShowFinishScreen] = useState(false);
 
   const checkFinish = () => {
-    if (countFinishedBridges() === bridges.length) {
+    if (countFinishedBridges() === bridges.length && !isAlreadyFinished()) {
       // bridges.forEach((b) => {
       //   unsetBridgeFinished(b);
       // });
+      markAsFinished();
       setShowFinishScreen(true);
     }
   };
@@ -65,6 +66,14 @@ function unsetBridgeFinished(bridge) {
 
 function countFinishedBridges() {
   return bridges.filter(isBridgeFinished).length;
+}
+
+function markAsFinished() {
+  localStorage.setItem("finished", true);
+}
+
+function isAlreadyFinished() {
+  return localStorage.getItem("finished");
 }
 
 export default App;
