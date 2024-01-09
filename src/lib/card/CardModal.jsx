@@ -33,7 +33,7 @@ function CardModal({
   disableAnimationOnEnter = false,
   showModal,
   setShowModal,
-  checkFinish,
+  onQuestionSolved,
   children,
 }) {
   const questionRef = useRef(null);
@@ -55,6 +55,7 @@ function CardModal({
   const closeModal = () => {
     setShowModal(false);
     setTimeout(() => setShowFront(true), transitionTimeout);
+    onQuestionSolved();
   };
 
   return (

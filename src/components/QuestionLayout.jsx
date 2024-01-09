@@ -33,7 +33,6 @@ export function QuestionLayout({
   const [answerState, setAnswerState] = useState(alreadySolved);
 
   const checkAnswerOnClick = (good) => {
-    console.log(good);
     if (good) {
       localStorage.setItem(id, true);
       setAnswerState(true);

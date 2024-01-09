@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { cloneElement, useContext } from "react";
 
 import styles from "./QuestionBackCard.module.css";
 
@@ -12,7 +12,9 @@ function sidebar(images) {
   return (
     <div className={styles["sidebar"]}>
       <div>{images[0]}</div>
-      <div className={styles["sidebar-extra-images"]}>{images[1]}</div>
+      <div className={styles["sidebar-extra-images"]}>
+        {images[1].map((e, idx) => cloneElement(e, { key: idx }))}
+      </div>
     </div>
   );
 }
@@ -42,7 +44,7 @@ function QuestionBackCard({
           showSecondRowImages ? { marginBottom: "1rem" } : { display: "none" }
         }
       >
-        {images[1]}
+        {images[1].map((e, idx) => cloneElement(e, { key: idx }))}
       </div>
       <Button onClick={ctx.closeModal}>Дальше</Button>
       <div className={styles["footer"]}></div>

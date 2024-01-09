@@ -1,5 +1,5 @@
 import L from "leaflet";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, createContext } from "react";
 import { Marker } from "react-leaflet";
 import { bridges } from "../js/bridges";
 import CardModal from "../lib/card/CardModal";
@@ -22,20 +22,17 @@ function BridgeMarker({ position, children, checkFinish }) {
     iconUrl: markerYellowIcon,
   });
 
-  let icon = localStorage.getItem(JSON.stringify(position))
-    ? greenIcon
-    : blueIcon;
+  const [icon, setIcon] = useState(
+    localStorage.getItem(JSON.stringify(position)) ? greenIcon : blueIcon,
+  );
 
   const [showModal, setShowModal] = useState(false);
 
-  const handleClick = () => {
-    setShowModal(true);
-  };
-
   const onQuestionSolved = () => {
-    localStorage.setItem("bridge" + position, "true");
-    icon = greenIcon;
-    setShowModal(true);
+    setIcon(
+      localStorage.getItem(JSON.stringify(position)) ? greenIcon : blueIcon,
+    );
+    setTimeout(checkFinish, 500);
   };
 
   return (
@@ -43,14 +40,13 @@ function BridgeMarker({ position, children, checkFinish }) {
       <Marker
         className="marker"
         position={position}
-        eventHandlers={{ click: handleClick }}
+        eventHandlers={{ click: () => setShowModal(true) }}
         icon={icon}
       ></Marker>
       <CardModal
         showModal={showModal}
         setShowModal={setShowModal}
         onQuestionSolved={onQuestionSolved}
-        checkFinish={checkFinish}
       >
         {children}
       </CardModal>
@@ -61,8 +57,8 @@ function BridgeMarker({ position, children, checkFinish }) {
 function BridgeMarkerList({ checkFinish }) {
   return (
     <ul>
-      {bridges.map((bridge) => (
-        <li key={bridge.position}>
+      {bridges.map((bridge, idx) => (
+        <li key={idx}>
           <BridgeMarker position={bridge.position} checkFinish={checkFinish}>
             {bridge.overlayComponent}
           </BridgeMarker>

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import BridgeMarkerList from "../commons/BridgeMarker";
 import NearestMarker from "../commons/NearestMarker";
 import WelcomeScreen from "../components/WelcomeScreen";
-import FinishScreen from "../commons/FinishScreen";
+import FinishScreen from "../components/FinishScreen";
 import { bridges } from "./bridges";
 import config from "./config";
 import ZoomShowHide from "./ZoomShowHide";
@@ -18,9 +18,9 @@ function App() {
 
   const checkFinish = () => {
     if (countFinishedBridges() === bridges.length) {
-      bridges.forEach((b) => {
-        unsetBridgeFinished(b);
-      });
+      // bridges.forEach((b) => {
+      //   unsetBridgeFinished(b);
+      // });
       setShowFinishScreen(true);
     }
   };
@@ -56,11 +56,11 @@ function App() {
 }
 
 function isBridgeFinished(bridge) {
-  return localStorage.getItem("bridge" + bridge.position);
+  return localStorage.getItem(JSON.stringify(bridge.position));
 }
 
 function unsetBridgeFinished(bridge) {
-  return localStorage.removeItem("bridge" + bridge.position);
+  return localStorage.removeItem(JSON.stringify(bridge.position));
 }
 
 function countFinishedBridges() {
