@@ -17,3 +17,9 @@
 .paragraph > * + * {
   margin-block-start: 1.5rem;
 }
+
+@media (min-width: 768px) and (not (orientation: portrait)) {
+  .shrinked-paragraph {
+    width: 70%;
+  }
+}
