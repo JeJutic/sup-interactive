@@ -20,7 +20,11 @@ function QuestionTextInput({ children, rightAnswers }) {
           value={answerValue}
           onChange={(e) => setAnswerValue(e.target.value)}
         />
-        <Button onClick={() => qCtx(rightAnswers.includes(answerValue.trim()))}>
+        <Button
+          onClick={() =>
+            qCtx(rightAnswers.includes(answerValue.toLocaleLowerCase().trim()))
+          }
+        >
           Отправить
         </Button>
       </div>
