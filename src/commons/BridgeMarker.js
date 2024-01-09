@@ -22,7 +22,9 @@ function BridgeMarker({ position, children, checkFinish }) {
     iconUrl: markerYellowIcon,
   });
 
-  let icon = localStorage.getItem("bridge" + position) ? greenIcon : blueIcon;
+  let icon = localStorage.getItem(JSON.stringify(position))
+    ? greenIcon
+    : blueIcon;
 
   const [showModal, setShowModal] = useState(false);
 
