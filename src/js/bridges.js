@@ -13,6 +13,10 @@ import q02img1 from "img/questions/02/1.jpg";
 import q02img2 from "img/questions/02/2.jpg";
 import q02img3 from "img/questions/02/3.jpg";
 
+import Question3 from "components/Question3";
+import q03img1 from "img/questions/03/1.jpg";
+import q03img2 from "img/questions/03/2.jpg";
+
 import Question6 from "components/Question6";
 import q06img1 from "img/questions/06/1.jpg";
 import q06img2 from "img/questions/06/2.jpg";
@@ -88,7 +92,7 @@ export const bridges = [
         }
       >
         <QuestionTextInput rightAnswers={["чижик-пыжик"]}>
-          <div>
+          <div className={commonStyles["shrinked-paragraph"]}>
             Неподалёку от моста в 1835 году находилось Императорское училище
             правоведения. Воспитанники училища носили мундиры зелёного цвета с
             желтыми петлицами, которые напоминали оттенок оперения птицы, а
@@ -98,6 +102,34 @@ export const bridges = [
             внешнее сходство студентам дали прозвище и придумали одноименную
             песенку. Какое это было прозвище?
           </div>
+        </QuestionTextInput>
+      </QuestionLayout>
+    ),
+  },
+  {
+    position: [59.933215, 30.342661],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.933215, 30.342661])}
+        title="Задание 3 из 13"
+        images={[
+          <img alt="" src={q03img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q03img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        hint="идёт, берет под уздцы, конь сопротивляется, подчиняется"
+        info={
+          <>
+            <p>
+              В 1741 году персидский шах преподнес подарок русской императрице
+              Анне Иоанновне — 14 слонов. Чтобы этот подарок могли доставить,
+              пришлось усиливать мост.
+            </p>
+          </>
+        }
+      >
+        <QuestionTextInput rightAnswers={["4213"]}>
+          <Question3 />
         </QuestionTextInput>
       </QuestionLayout>
     ),
