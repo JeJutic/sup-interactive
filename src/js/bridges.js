@@ -31,6 +31,9 @@ import q06img2 from "img/questions/06/2.jpg";
 import q07img1 from "img/questions/07/1.jpg";
 import q07img2 from "img/questions/07/2.jpg";
 
+import q08img1 from "img/questions/08/1.jpg";
+import q08img2 from "img/questions/08/2.jpg";
+
 import Question11 from "components/Question11";
 import q11img1 from "img/questions/11/1.jpg";
 import q11img2 from "img/questions/11/2.jpg";
@@ -267,6 +270,47 @@ export const bridges = [
             только одна точка на определенном месте, откуда видно все семь
             переправ. Взгляните на карту и определите, что это за мост?
             (запишите в формате: дворцовый)
+          </div>
+        </QuestionTextInput>
+      </QuestionLayout>
+    ),
+  },
+  {
+    position: [59.924082, 30.302589],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.924082, 30.302589])}
+        title="Задание 8 из 13"
+        images={[
+          <img alt="" src={q08img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q08img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        hint="А судьи кто?"
+        info={
+          <p>
+            Здесь же, в доходном доме Ивана Вальха по адресу набережная канала
+            Грибоедова, дом 104, с 1816 по 1818 г., в одной из квартир
+            «проживала» старуха-процентщица — героиня романа Ф. М. Достоевского
+            «Преступление и наказание».
+          </p>
+        }
+      >
+        <QuestionTextInput rightAnswers={["горе от ума"]}>
+          <div
+            className={`${commonStyles["shrinked-paragraph"]} ${commonStyles["paragraph"]}`}
+          >
+            <p>
+              Около Харламова моста в одном из домов проживал знаменитый русский
+              писатель. Прочтите синонимичный отрывок из произведения, которое
+              начал писать автор в этом доме. Назовите название этого
+              произведения. (Ответ запишите в формате: война и мир)
+            </p>
+            <p>
+              «Те, кто дожил до своих седых волос! <br />
+              Те, кого мы обязаны уважать в пустыне! <br />
+              Вот кто наши суровые знатоки и судьи!»
+            </p>
           </div>
         </QuestionTextInput>
       </QuestionLayout>
