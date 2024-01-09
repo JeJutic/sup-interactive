@@ -21,6 +21,9 @@ import Question4 from "components/Question4";
 import q04img1 from "img/questions/04/1.jpg";
 import q04img2 from "img/questions/04/2.jpg";
 
+import q05img1 from "img/questions/05/1.jpg";
+import q05img2 from "img/questions/05/2.jpg";
+
 import Question6 from "components/Question6";
 import q06img1 from "img/questions/06/1.jpg";
 import q06img2 from "img/questions/06/2.jpg";
@@ -163,6 +166,41 @@ export const bridges = [
         }
       >
         <Question4 />
+      </QuestionLayout>
+    ),
+  },
+  {
+    position: [59.921501, 30.317094],
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.921501, 30.317094])}
+        title="Задание 5 из 13"
+        images={[
+          <img alt="" src={q05img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q05img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        hint="Эти мосты участвуют в шоу «Поющие мосты»"
+        info={
+          <>
+            <p>
+              За историю своего существования мост претерпел несколько
+              реконструкций. В конечном итоге он стал трехпролётным, а до этого
+              был в 2 раза уже, чем Московский проспект.
+            </p>
+          </>
+        }
+      >
+        <QuestionTextInput rightAnswers={["разводные", "разводной"]}>
+          <div className={commonStyles["shrinked-paragraph"]}>
+            Когда обуховский мост только построили, в середине оставили щель в
+            70 см, чтобы корабли могли без труда пройти под ним. Днём для
+            удобства передвижения эту щель закрывали досками. Это стало
+            прототипом механизма, который сейчас используется на многих мостах в
+            Санкт-Петербурге. Как называются мосты с этим механизмом? (в ответ
+            запишите одно слово)
+          </div>
+        </QuestionTextInput>
       </QuestionLayout>
     ),
   },
