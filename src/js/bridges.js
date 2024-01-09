@@ -48,6 +48,7 @@ import q12img2 from "img/questions/12/2.jpg";
 
 import q13img1 from "img/questions/13/1.jpg";
 import q13img2 from "img/questions/13/2.jpg";
+import Question9 from "components/Question9";
 
 export const bridges = [
   {
@@ -322,6 +323,12 @@ export const bridges = [
         </QuestionTextInput>
       </QuestionLayout>
     ),
+  },
+  {
+    position: [59.926732, 30.300969],
+    overlayComponent: (
+      <Question9 />
+    )
   },
   {
     position: [59.925786, 30.313339],

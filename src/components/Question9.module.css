@@ -1,0 +1,44 @@
+.content-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/questions/09/background.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+@media (orientation: portrait) {
+    .content-wrapper::before {
+        background-position-y: bottom;
+        background-position-x: calc(-2797 / 1492 * 100vh * 667 / 2797);
+    }
+}
+
+
+.close-button:after {
+    display: inline-block;
+    content: "\00d7";
+}
+
+.close-button {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    right: 0.5vw;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 200ms;
+}
+
