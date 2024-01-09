@@ -56,7 +56,7 @@ function Question11() {
         <span class={styles["filled"]}>{fillState[1]}</span>, который будет{" "}
         <span class={styles["filled"]}>{fillState[2]}</span>, не даст упасть
         духом, впасть в зимнюю депрессию и поможет{" "}
-        <span class={styles["filled"]}>{fillState[3]}</span>.»
+        <span class={styles["filled"]}>{fillState[3]}</span>».
       </p>
       <div className={styles["buttons"]}>
         {options.map((content, idx) => {
