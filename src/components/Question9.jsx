@@ -66,7 +66,7 @@ const dataGen = (ctx, state, setState) => [
               }}
               onClick={() => setState("block1")}
             >
-              Дальше
+              Начать
             </CustomButton>
           </div>
         </DecoratedBox>
