@@ -34,6 +34,9 @@ import q07img2 from "img/questions/07/2.jpg";
 import q08img1 from "img/questions/08/1.jpg";
 import q08img2 from "img/questions/08/2.jpg";
 
+import q09img1 from "img/questions/09/1.jpg";
+import q09img2 from "img/questions/09/2.jpg";
+
 import Question10 from "components/Question10";
 import q10img1 from "img/questions/10/1.jpg";
 import q10img2 from "img/questions/10/2.jpg";
@@ -326,7 +329,25 @@ export const bridges = [
   },
   {
     position: [59.926732, 30.300969],
-    overlayComponent: <Question9 />,
+    overlayComponent: (
+      <QuestionLayout
+        id={JSON.stringify([59.926732, 30.300969])}
+        title="Задание 9 из 13"
+        images={[
+          <img alt="" src={q09img1} style={{ objectFit: "cover" }} />,
+          [<img alt="" src={q09img2} style={{ objectFit: "cover" }} />],
+        ]}
+        showSecondRowImages={false}
+        info={
+          <p>
+            Расположенные на мосту чугунные львы &mdash; работа скульптора П.П.
+            Соколова, который также создал фигуры Крылатых львов на Банковском
+            мосту и сфинксов на Египетском мосту.
+          </p>
+        }
+        customFront={<Question9 />}
+      ></QuestionLayout>
+    ),
   },
   {
     position: [59.925786, 30.313339],

@@ -4,6 +4,7 @@ import { ImageOverlay, MapContainer, useMap } from "react-leaflet";
 import React, { useState } from "react";
 import BridgeMarkerList from "../commons/BridgeMarker";
 import NearestMarker from "../commons/NearestMarker";
+// import L from "leaflet";
 import WelcomeScreen from "../components/WelcomeScreen";
 import FinishScreen from "../components/FinishScreen";
 import { bridges } from "./bridges";
@@ -28,6 +29,16 @@ function App() {
 
   function MapSettings() {
     const map = useMap();
+    // var popup = L.popup();
+
+    // function onMapClick(e) {
+    //   popup
+    //     .setLatLng(e.latlng)
+    //     .setContent("You clicked the map at " + e.latlng.toString())
+    //     .openOn(map);
+    // }
+
+    // map.on('click', onMapClick);
     const zsh = new ZoomShowHide();
     zsh.addTo(map);
 

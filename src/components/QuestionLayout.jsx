@@ -20,6 +20,7 @@ export function QuestionLayout({
   hint,
   info,
   showSecondRowImages = false,
+  customFront = null,
 }) {
   const alreadySolved = !!localStorage.getItem(id);
   const ctx = useContext(CardModalContext);
@@ -40,7 +41,7 @@ export function QuestionLayout({
     ctx.flip();
   };
 
-  const front = (
+  const front = customFront || (
     <QuestionCardLayout>
       <ContentGridLayout
         title={
