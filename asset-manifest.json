@@ -1,22 +1,30 @@
 {
   "files": {
-    "main.css": "/sup-interactive/static/css/main.bf04dd68.css",
-    "main.js": "/sup-interactive/static/js/main.834746cf.js",
-    "static/media/stone_bridge.png": "/sup-interactive/static/media/stone_bridge.76c12fa7c103492a4992.png",
+    "main.css": "/sup-interactive/static/css/main.b966e7b0.css",
+    "main.js": "/sup-interactive/static/js/main.1f3e4720.js",
     "static/media/map.webp": "/sup-interactive/static/media/map.dbe08d088c27c7864ba3.webp",
-    "static/media/bottom_finish_page.png": "/sup-interactive/static/media/bottom_finish_page.673b742a297bed8bdde0.png",
-    "static/media/test-bridge.jpg": "/sup-interactive/static/media/test-bridge.13695f0a784e351cd125.jpg",
+    "static/media/1.jpg": "/sup-interactive/static/media/1.9d5095ef5c4a050b1a12.jpg",
+    "static/media/2.jpg": "/sup-interactive/static/media/2.ee2d4dd8d87707bac805.jpg",
+    "static/media/background.jpg": "/sup-interactive/static/media/background.8a4a1f928ae2958bbb0d.jpg",
+    "static/media/fail.jpg": "/sup-interactive/static/media/fail.b8a46d18eeff5741dd35.jpg",
+    "static/media/q1.jpg": "/sup-interactive/static/media/q1.c25a68c5f7a022b03197.jpg",
+    "static/media/q0.jpg": "/sup-interactive/static/media/q0.3d316498eb5c171fcfd2.jpg",
+    "static/media/3.jpg": "/sup-interactive/static/media/3.03d585839a6ea73bd4e7.jpg",
+    "static/media/q5.jpg": "/sup-interactive/static/media/q5.ff95469fa6db28e6801b.jpg",
+    "static/media/q3.jpg": "/sup-interactive/static/media/q3.cb3096a33c8f36c205fd.jpg",
+    "static/media/q4.jpg": "/sup-interactive/static/media/q4.cb4994f9363d13bc1e82.jpg",
+    "static/media/q6.jpg": "/sup-interactive/static/media/q6.64dce0831f5bb9df3be3.jpg",
+    "static/media/q2.jpg": "/sup-interactive/static/media/q2.ea724022f0635aaee2ff.jpg",
     "static/media/Kunstkamera.png": "/sup-interactive/static/media/Kunstkamera.d8c2190e4731209fbbf1.png",
     "static/media/Hermitage.png": "/sup-interactive/static/media/Hermitage.a4bc85b1b75a8f361d51.png",
+    "static/media/decoration.svg": "/sup-interactive/static/media/decoration.a66a9483a591fdacbf6639b61b8d27f1.svg",
     "static/media/bottomImg.svg": "/sup-interactive/static/media/bottomImg.f7a8a770afcb0ba3d3f33781cf393656.svg",
     "index.html": "/sup-interactive/index.html",
-    "static/media/caret-right.svg": "/sup-interactive/static/media/caret-right.f0e90ee70f07de465db504d1daf59e3a.svg",
-    "static/media/caret-left-fill.svg": "/sup-interactive/static/media/caret-left-fill.eef5702c324970894bf28b0068d643a8.svg",
-    "main.bf04dd68.css.map": "/sup-interactive/static/css/main.bf04dd68.css.map",
-    "main.834746cf.js.map": "/sup-interactive/static/js/main.834746cf.js.map"
+    "main.b966e7b0.css.map": "/sup-interactive/static/css/main.b966e7b0.css.map",
+    "main.1f3e4720.js.map": "/sup-interactive/static/js/main.1f3e4720.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf04dd68.css",
-    "static/js/main.834746cf.js"
+    "static/css/main.b966e7b0.css",
+    "static/js/main.1f3e4720.js"
   ]
 }
